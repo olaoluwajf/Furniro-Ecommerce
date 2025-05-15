@@ -8,7 +8,7 @@ const Header = () => {
       <div className='flex grid-cols-3'>
          <a href="" className='flex items-center'>
             <img src={Logo} alt="Logo" />
-            <h1 className='text-2xl font-bold text-amber-500'>Furni</h1>
+            <h1 className='text-3xl px-2 font-bold text-white'>Furni</h1>
          </a>   
       </div>
       
