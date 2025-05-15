@@ -1,11 +1,14 @@
 
+import React from "react";
+import Home from "./Components/Home";
+import Header from "./Components/Header";
+
 function App() {
 
   return (
     <>
-      <div>
-          <h1 className='font-extrabold underline'>Welcome</h1>
-      </div>
+        <Header/>
+        <Home/>
     </>
   )
 }

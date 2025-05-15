@@ -1,12 +1,12 @@
 import React from 'react'
+import Header from './Header'
 
 const Home = () => {
   return (
     <>
-          <section className="flex-col absolute inset-0  justify-between bg-[url('./assets/f.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center h-screen ">
-             <div>
+          <section className="flex-col absolute inset-0 bg-[url('./assets/f.jpeg')] bg-no-repeat bg-cover bg-fixed bg-center h-screen ">
+            <Header/>
 
-             </div>
             <div className="bg-amber-400 items-center ml-[750px] mt-[100px] p-5 rounded-2xl justify-end flex flex-col md:w-1/2 space-y-6 ">
               <h5 className='text-lg font-medium text-gray-600'>New Arrival</h5>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Discover Our New Collection</h1> 
