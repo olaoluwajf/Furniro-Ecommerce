@@ -10,9 +10,7 @@ function App() {
         <Header/>
         <Home/>
         <div className="flex flex-row text-center justify-center px-4 py-4 ">
-          <Room name="Dining" />
-          <Room name="Living"/>
-          <Room name="Bedroom"/>
+           <Room/>
         </div>
         <Footer/>
     </>
