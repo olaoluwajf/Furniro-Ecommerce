@@ -22,12 +22,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='bg-amber-300 py-16 px-4'>
-        <div className="container mx-auto">
-          <h1 className='text-3xl font-bold text-center mb-8'>Browse the Range</h1>
-          <p className="text-center ">Choose your favorite. Enjoy comfortable sleep</p>
-        </div>
-      </section>
     </div>
   )
 }
