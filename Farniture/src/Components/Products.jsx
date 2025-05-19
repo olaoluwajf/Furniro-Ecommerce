@@ -3,7 +3,7 @@ import AddToCart from './UI/AddToCart';
 
 const Products= () =>{
   return (
-  <div className='justify-center px-5'>
+  <div className='justify-center px-5 py-3'>
     <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
       {products.map((item) => (
        <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300">

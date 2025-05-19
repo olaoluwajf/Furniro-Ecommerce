@@ -15,7 +15,7 @@ const Home = () => {
               our curated collection of sofas, beds, tables, and more—blending 
               timeless design with exceptional quality.
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl text-white text-lg font-bold transition-colors cursor-pointer">
+            <button className="bg-colors space-x-4 px-6 py-4 rounded-[5px] text-white text-lg font-bold transition-colors cursor-pointer">
               Buy now
             </button> 
           </div>
