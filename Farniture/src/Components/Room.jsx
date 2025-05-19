@@ -10,7 +10,7 @@ const Room = () => {
       <div className='flex flex-row text-center justify-center px-4 py-4'>
         {Rooms.map((item, index)=> 
         (
-          <div key={index}>
+          <div key={index} className='px-3'>
             <img src={item.img} alt={item.name} />
             <p className='py-4 text-center font-bold'>{item.name}</p>
           </div> 
