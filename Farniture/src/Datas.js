@@ -2,9 +2,14 @@
 import catimg1 from './assets/catimg1.png';
 import Rectangle25 from './assets/Living.png';
 import Rectangle26 from './assets/Bedroom.png'
-import Pro1 from './assets/proimg1.png'
-import pr2 from './assets/proimg3.png'
-import pr3 from './assets/proimg4.png'
+import pr1 from './assets/proimg1.png'
+
+import pr3 from './assets/proimg3.png'
+import pr4 from './assets/proimg4.png'
+import pr5 from './assets/proimg5.png'
+import pr6 from './assets/proimg6.png'
+import pr7 from './assets/proimg7.png'
+import pr8 from './assets/proimg8.png'
 
 export const Rooms=[
         {name: 'Dining',
@@ -22,14 +27,14 @@ export const Rooms=[
     ];
 export const products=[
     {
-        img: Pro1,
+        img: pr1,
         name: 'Syltherine',
         price: 'Rp 1.500.000',
         discount: 'Rp 3.500.000',
         description: 'Stylish Cafe Chair'
     } ,
     {
-        img: pr2,
+        img: pr1,
         name: 'Leviosa',
         price: 'Rp 2.500.000',
         description: 'Stylish Cafe Chair'
@@ -44,26 +49,42 @@ export const products=[
     } 
      ,
     {
-        img: pr2,
+        img: pr4,
         name: 'Respira',
         description: 'Outdoor bar table and stool',
         price: 'Rp 1.500.000',
         new: true    
     },
     {
-        img: pr2,
-        name: 'Syltherine',
+        img: pr5,
+        name: 'Grifo',
+        description: 'Night lamp',
         price: 'Rp 1.500.000',
-        discount: 'Rp 3.500.000',
-        description: 'Stylish Cafe Chair'
+        new: true    
+    },
+    
+    {
+        img:  pr6,
+        name: ' Muggo',
+        price: 'Rp 150.000',
+        description: 'Small Mug '
     } 
      ,
     {
-        img: pr2,
-        name: 'Syltherine',
-        price: 'Rp 1.500.000',
-        discount: 'Rp 3.500.000',
-        description: 'Stylish Cafe Chair'
-    } 
+        img: pr7,
+        name: 'Pingky',
+        price: 'Rp 7.000.000',
+        discount: 'Rp 14.000.000',
+        description: 'Cute bed set'
+    }, 
+    {
+        img: pr8,
+        name: 'Potty',
+        description: 'Minimalist flower pot',
+        price: 'Rp 500.000',
+        disPrecent: 50,
+        new: true    
+    },
+
      
 ]
