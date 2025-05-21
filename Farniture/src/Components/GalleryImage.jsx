@@ -11,21 +11,21 @@ import g9 from '../assets/Rectangle 45.png'
 
 const GalleryImages = () => {
   return (
-    <div className='text-center'>
-        <p>Share your setup with</p>
-        <h1>#Funiro Furniture</h1>
+    <div className='text-center mt-4'>
+        <p className=''>Share your setup with</p>
+        <h1 className='font-bold text-3xl'>#Funiro Furniture</h1>
         
-      <div className='flex py-5 justify-center items-center px-1'>
+      <div className='flex py-1 justify-center items-center px-1'>
        <div className=''>
-            <div className='flex px-3 gap-3'>
+            <div className='flex px-3 gap-3 items-end'>
               { 
                <img src={g1} alt="Image" />}
-               <img src={g3} alt="Image" />
+               <img src={g3} alt="Image" className='h-[320px] '/>
                
             </div>
-            <div className='flex px-3 gap-3 py-4'>
+            <div className='flex px-3 gap-3 py-4 '>
               <img src={g2} alt="Image" />
-              <img src={g4} alt="Image" />
+              <img src={g4} alt="Image"  className='h-[250px]'/>
             </div>
         </div>
         
@@ -34,16 +34,16 @@ const GalleryImages = () => {
         </div>
 
         <div>
-          <div className='flex px-3 gap-3 py-3'>
-            <img src={g7} alt="Image" />
+          <div className='flex px-3 gap-3 py-3 items-end'>
+            <img src={g7} alt="Image" className='h-[360px] '/>
             <img src={g9} alt="Image" />
             
             
             
           </div>
-          <div className='flex px-3 gap-3'>
+          <div className='flex @min-sm:grid px-3 gap-3 '>
             <img src={g6} alt="Image" />
-            <img src={g8} alt="Image" />
+            <img src={g8} alt="Image" className='h-[180px]'/>
           </div>
         </div>
       </div>
