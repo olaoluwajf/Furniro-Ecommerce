@@ -11,6 +11,13 @@ import pr6 from './assets/proimg6.png'
 import pr7 from './assets/proimg7.png'
 import pr8 from './assets/proimg8.png'
 
+import room1 from './assets/Rectangle 24.png'
+import room2 from './assets/Rectangle 25.png'
+import room3 from './assets/Rectangle 36.png'
+import room4 from './assets/Rectangle 37.png'
+
+
+
 export const Rooms=[
         {name: 'Dining',
          img: catimg1
@@ -30,8 +37,10 @@ export const products=[
         img: pr1,
         name: 'Syltherine',
         price: 'Rp 1.500.000',
+        disPrecent: 30,
         discount: 'Rp 3.500.000',
-        description: 'Stylish Cafe Chair'
+        description: 'Stylish Cafe Chair',
+
     } ,
     {
         img: pr1,
@@ -42,9 +51,10 @@ export const products=[
      ,
     {
         img: pr3,
-        name: 'Solito',
+        name: 'Lolito',
         price: 'Rp 7.000.000',
         discount: 'Rp 14.000.000',
+        disPrecent: 50,
         description: 'Luxury big sofa'
     } 
      ,
@@ -59,20 +69,21 @@ export const products=[
         img: pr5,
         name: 'Grifo',
         description: 'Night lamp',
-        price: 'Rp 1.500.000',
-        new: true    
+        price: 'Rp 1.500.000',  
     },
     
     {
         img:  pr6,
         name: ' Muggo',
         price: 'Rp 150.000',
+        new: true,
         description: 'Small Mug '
     } 
      ,
     {
         img: pr7,
         name: 'Pingky',
+        disPrecent: 50,
         price: 'Rp 7.000.000',
         discount: 'Rp 14.000.000',
         description: 'Cute bed set'
@@ -82,9 +93,35 @@ export const products=[
         name: 'Potty',
         description: 'Minimalist flower pot',
         price: 'Rp 500.000',
-        disPrecent: 50,
         new: true    
     },
 
      
+]
+
+export const RoomImages=[
+    {
+        id: 1,
+        title:'bedroom',
+        description: 'Inner peace',
+        image: room1,
+    },
+    {
+        id: 2,
+        title:'bedroom',
+        description: 'Inner peace',
+        image: room2,
+    },
+    {
+        id: 3,
+        title:'bedroom',
+        description: 'Inner peace',
+        image: room3,
+    },
+    {
+        id: 4,
+        title:'bedroom',
+        description: 'Inner peace',
+        image: room4,
+    }
 ]
