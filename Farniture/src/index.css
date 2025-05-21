@@ -1,1 +1,16 @@
 @import "tailwindcss";
+.h1-color{
+    color: #B88E2F;
+}
+.hero-background{
+    background-color: #FFF3E3;
+}
+.bg-color{
+    background-color: #3A3A3A;
+}
+.bg-colors{
+    background-color: #B88E2F;
+}
+.bg-colors:hover{
+    background-color: #8f6a16;
+}
