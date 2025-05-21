@@ -51,15 +51,15 @@ const Footer = () => {
 
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-stone-700 uppercase tracking-wider">Newsletter</h3>
-          <form className="space-y-4">
+          <form className="space-y-4 flex items-start gap-1 align-middle justify-between">
             <input 
               type="email" 
               placeholder="Enter Your Email Address"  
-              className="w-full px-4 py-2 border-b border-stone-400 bg-transparent focus:outline-none focus:border-amber-600 transition-colors"
+              className="w-full px-5 py-2 border-b border-stone-400 bg-transparent focus:outline-none focus:border-amber-600 transition-colors"
             />
             <button 
               type="submit"
-              className="bg-stone-700 text-white px-6 py-2 hover:bg-amber-600 transition-colors rounded-xl cursor-pointer"
+              className="font-bold hover:underline-offset-2 cursor-pointer px-4 py-2 border-b border-stone-400 bg-transparent focus:outline-none focus:border-amber-600 transition-colors"
             >
               Subscribe
             </button>
