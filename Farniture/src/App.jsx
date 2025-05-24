@@ -5,6 +5,8 @@ import Room from "./Components/Room";
 import Products from "./Components/Products";
 import RoomInspiration from "./Components/RoomInspiration";
 import GalleryImages from "./Components/GalleryImage";
+import Shop from "./Components/Shop";
+import ShopHero from "./Components/ShopHero";
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
         </div>
         <RoomInspiration/>
         <GalleryImages/>
+        <ShopHero/>
+        <Shop/>
         <Footer/>
     </>
   )
