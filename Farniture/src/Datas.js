@@ -32,7 +32,7 @@ export const Rooms=[
         }
 
     ];
-export const products=[
+export const products1=[
     {
         img: pr1,
         name: 'Syltherine',
@@ -64,7 +64,11 @@ export const products=[
         description: 'Outdoor bar table and stool',
         price: 'Rp 1.500.000',
         new: true    
-    },
+    }
+     
+]
+export const procucts2=[
+    
     {
         img: pr5,
         name: 'Grifo',
@@ -94,9 +98,7 @@ export const products=[
         description: 'Minimalist flower pot',
         price: 'Rp 500.000',
         new: true    
-    },
-
-     
+    }
 ]
 
 export const RoomImages=[
