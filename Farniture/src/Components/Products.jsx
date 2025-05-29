@@ -1,17 +1,13 @@
-import { products } from '../Datas';
+import { products1 } from '../Datas';
 import Button from './Button';
 import AddToCart from './UI/AddToCart';
 
 const Products= () =>{
   return (
   <div className='justify-center px-5 py-5'>
-    <div className='justify-center text-center text-5xl font-bold py-4 mb-5'>
-      <h1>Our Products</h1>
-    </div>
     <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
-      {products.map((item) => (
+      {products1.map((item) => (
        <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-
         <div className="relative z-0" >
           <img 
             src={item.img} 
@@ -48,9 +44,6 @@ const Products= () =>{
         <AddToCart/>
       </div>
      ))}
-    </div>
-    <div className='justify-center text-center p-5 '>
-       <Button name='Show more'/>
     </div>
   </div>
 );
