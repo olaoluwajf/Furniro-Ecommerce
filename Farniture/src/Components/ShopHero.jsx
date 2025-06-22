@@ -2,6 +2,9 @@ import React from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import Products from './Products'
 import Shop from './Shop'
+import Button from './Button'
+import NButton from './UI/NButton'
+import Features from './Features'
 const ShopHero = () => {
   return (
     <div>
@@ -16,12 +19,21 @@ const ShopHero = () => {
         </div>
     </div>
     <Shop/>
-    <div>
+        <div>
           <Products/>
           <Products/>
           <Products/>
           <Products/>
+            <div className='flex flex-row justify-center' >
+              <NButton name='1' className='bg-amber-500 font-bold'/>
+              <NButton name='2'/>
+              <NButton name='3' />
+              <div onClick={"Hello"}>
+                 <NButton name='next'/>
+              </div>
+            </div>
         </div>
+      <Features/>
     </div>
   )
 }
