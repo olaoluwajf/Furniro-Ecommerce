@@ -8,29 +8,29 @@ const Menu = () => {
         <Link to="/" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         Home
         </Link>
-        <a to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
+        <Link to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         Shop
-        </a>
-        <a to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
+        </Link>
+        <Link to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         About
-        </a>
-        <a to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
+        </Link>
+        <Link to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         Contact
-        </a>
+        </Link>
     </div>
     <div className='flex justify-center space-x-6 mt-4'>
-        <a to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
+        <Link to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
         <FiSearch/>
-        </a>
-        <a to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
+        </Link>
+        <Link to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
         <FiUser/>
-        </a>
-        <a to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
+        </Link>
+        <Link to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
         <FiHeart/>
-        </a>
-        <a to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
+        </Link>
+        <Link to="#" className='text-gray-500 hover:text-amber-600 cursor-pointer transition-colors text-xl'>
         <FiShoppingCart/>
-        </a>
+        </Link>
     </div>
     </div>
   )
