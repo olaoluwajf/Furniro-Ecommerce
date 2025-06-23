@@ -6,8 +6,10 @@ const Products= () =>{
   return (
   <div className='justify-center px-5 py-5'>
     <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
-      {products1.map((item) => (
-       <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+      {products1.map((item, index) => (
+       <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+       key={index}
+       >
         <div className="relative z-0" >
           <img 
             src={item.img} 
