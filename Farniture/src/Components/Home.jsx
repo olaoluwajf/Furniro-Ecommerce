@@ -25,7 +25,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-row text-center justify-center px-4 py-4 ">
+      <div className="  text-center justify-center px-4 py-4 ">
            <Room />
         </div>
       <div className='justify-center px-5 py-5'>
