@@ -2,7 +2,6 @@ import React from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import Products from './Products'
 import Shop from './Shop'
-import Button from './Button'
 import NButton from './UI/NButton'
 import Features from './Features'
 const ShopHero = () => {
