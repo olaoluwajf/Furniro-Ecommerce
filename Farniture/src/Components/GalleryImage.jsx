@@ -15,7 +15,7 @@ const GalleryImages = () => {
         <p className=''>Share your setup with</p>
         <h1 className='font-bold text-3xl'>#Funiro Furniture</h1>
         
-      <div className='flex py-1 justify-center items-center px-1'>
+      <div className='flex flex-col xl:flex-row lg:flex-row lg:gap-1 py-1 justify-center items-center px-1'>
        <div className=''>
             <div className='flex px-3 gap-3 items-end'>
               { 
