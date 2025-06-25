@@ -4,6 +4,7 @@ import Products from './Products'
 import Shop from './Shop'
 import NButton from './UI/NButton'
 import Features from './Features'
+import { Link } from 'react-router-dom'
 const ShopHero = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const ShopHero = () => {
         <h1 className='text-center justify-center text-4xl font-bold'>Shop</h1>
         <div className='text-center flex items-center'>
             <div className='flex items-center text-center'>
-                <a href="" className='font-bold text-center'>Home</a> 
+                <Link href="" className='font-bold text-center'>Home</Link> 
                 <FaGreaterThan className='justify-center text-[10px]'/>
             </div>
             <span className='text-center justify-center'>Shop</span>
