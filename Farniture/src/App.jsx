@@ -7,24 +7,20 @@ import RoomInspiration from "./Components/RoomInspiration";
 import GalleryImages from "./Components/GalleryImage";
 import Shop from "./Components/Shop";
 import ShopHero from "./Components/ShopHero";
+import {Route, Routes } from "react-router-dom";
 
 function App() {
 
   return (
     <>
-        <Header/>
-        <Home/>
-        <div className="flex flex-row text-center justify-center px-4 py-4 ">
-           <Room />
-        </div>
-        <div>
-          <Products/>
-        </div>
-        <RoomInspiration/>
-        <GalleryImages/>
-        <ShopHero/>
-        <Shop/>
-        <Footer/>
+      <Header/>
+      <Routes>
+              <Route path="/" element={<Home/>}>
+              </Route>
+              <Route path="/ShopHero" element={<ShopHero/>}>
+              </Route>
+      </Routes>
+      <Footer/>
     </>
   )
 }
