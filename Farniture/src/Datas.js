@@ -67,7 +67,7 @@ export const products1=[
     }
      
 ]
-export const procucts2=[
+export const products2=[
     
     {
         img: pr5,

@@ -1,5 +1,4 @@
 import { products1 } from '../Datas';
-import Button from './Button';
 import AddToCart from './UI/AddToCart';
 
 const Products= () =>{
@@ -26,7 +25,6 @@ const Products= () =>{
           <div className='p-3 absolute bg-red-700 text-center  text-white top-3 right-3 px-2 py-1 rounded-4xl w-[48px] h-[45px] z-32 font-bold justify-center'>
             -{item.disPrecent}%
           </div>
-
         )}
 
         <div className="p-4">
