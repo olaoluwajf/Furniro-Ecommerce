@@ -8,7 +8,7 @@ const Menu = () => {
         <Link to="/" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         Home
         </Link>
-        <Link to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
+        <Link to="/ShopHero" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
         Shop
         </Link>
         <Link to="#" className='hover:text-amber-600 px-3 py-2 text-amber-500 text-lg font-semibold transition-colors duration-200 border-b-2 border-transparent hover:border-amber-600'>
