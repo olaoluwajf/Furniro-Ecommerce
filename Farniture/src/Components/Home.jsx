@@ -1,6 +1,9 @@
 import Products from "./Products";
 import Button from "./Button";
 import Room from './Room'
+import GalleryImages from "./GalleryImage";
+import RoomInspiration from "./RoomInspiration";
+import Product2 from "./Product2";
 
 
 const Home = () => {
@@ -27,15 +30,22 @@ const Home = () => {
       </section>
       <div className="  text-center justify-center px-4 py-4 ">
            <Room />
-        </div>
+      </div>
       <div className='justify-center px-5 py-5'>
         <div className='justify-center text-center text-5xl font-bold py-4 mb-5'>
         <h1>Our Products</h1>
         </div>
         <Products/>
+        <Product2/>
           <div className='justify-center text-center p-5 '>
         <Button name='Show more'/>
         </div>
+      </div>
+      <div>
+        <RoomInspiration/>
+      </div>
+      <div>
+        <GalleryImages/>
       </div>
 
     </div>
