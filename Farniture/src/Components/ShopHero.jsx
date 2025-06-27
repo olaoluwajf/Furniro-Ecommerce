@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import Products from './Products'
 import Shop from './Shop'
@@ -9,10 +8,10 @@ const ShopHero = () => {
   return (
     <div>
     <div className=" bg-[url('./assets/Rectangle1.png')] text-center py-20 justify-center">
-        <h1 className='text-center justify-center text-4xl font-bold'>Shop</h1>
-        <div className='text-center flex items-center'>
-            <div className='flex items-center text-center'>
-                <Link href="" className='font-bold text-center'>Home</Link> 
+        <h1 className='text-center justify-center text-4xl font-bold gap-y-2 py-2'>Shop</h1>
+        <div className='text-center justify-center  flex items-center'>
+            <div className='flex p-3 items-center text-center'>
+                <Link to='/Home' className='font-bold text-[15px] p-1  justify-center text-center'>Home</Link> 
                 <FaGreaterThan className='justify-center text-[10px]'/>
             </div>
             <span className='text-center justify-center'>Shop</span>
