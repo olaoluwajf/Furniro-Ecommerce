@@ -8,6 +8,7 @@ import GalleryImages from "./Components/GalleryImage";
 import Shop from "./Components/Shop";
 import ShopHero from "./Components/ShopHero";
 import {Route, Routes } from "react-router-dom";
+import ProductDetail from "./Components/ProductDetail";
 
 function App() {
 
@@ -15,10 +16,9 @@ function App() {
     <>
       <Header/>
       <Routes>
-              <Route path="/" element={<Home/>}>
-              </Route>
-              <Route path="/ShopHero" element={<ShopHero/>}>
-              </Route>
+              <Route path="/" element={<Home/>}>  </Route>
+              <Route path="/ShopHero" element={<ShopHero/>}></Route>
+              <Route path="/ProductDetail" element={<ProductDetail/>}></Route>
       </Routes>
       <Footer/>
     </>
