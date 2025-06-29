@@ -1,12 +1,13 @@
-import { products1 } from '../Datas';
+import { products1, products2 } from '../Datas';
 import AddToCart from './UI/AddToCart';
 import { Link } from 'react-router-dom';
 
 const Products= () =>{
+  const allDatas=[...products1, ...products2];
   return (
   <div className='justify-center px-5 py-5'>
-    <Link className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
-      {products1.map((item, index) => (
+    <Link to='/ProductDetail' className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
+      {allDatas.map((item, index) => (
        <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
        key={index}
        >
