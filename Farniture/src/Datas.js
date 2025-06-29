@@ -2,8 +2,8 @@
 import catimg1 from './assets/catimg1.png';
 import Rectangle25 from './assets/Living.png';
 import Rectangle26 from './assets/Bedroom.png'
-import pr1 from './assets/proimg1.png'
 
+import pr1 from './assets/proimg1.png'
 import pr3 from './assets/proimg3.png'
 import pr4 from './assets/proimg4.png'
 import pr5 from './assets/proimg5.png'
@@ -15,8 +15,6 @@ import room1 from './assets/Rectangle 24.png'
 import room2 from './assets/Rectangle 25.png'
 import room3 from './assets/Rectangle 36.png'
 import room4 from './assets/Rectangle 37.png'
-
-
 
 export const Rooms=[
         {name: 'Dining',
@@ -34,6 +32,7 @@ export const Rooms=[
     ];
 export const products1=[
     {
+        id:1,
         img: pr1,
         name: 'Syltherine',
         price: 'Rp 1.500.000',
@@ -43,6 +42,7 @@ export const products1=[
 
     } ,
     {
+        id:2,
         img: pr1,
         name: 'Leviosa',
         price: 'Rp 2.500.000',
@@ -50,6 +50,7 @@ export const products1=[
     } 
      ,
     {
+        id:3,
         img: pr3,
         name: 'Lolito',
         price: 'Rp 7.000.000',
@@ -59,6 +60,7 @@ export const products1=[
     } 
      ,
     {
+        id:4,
         img: pr4,
         name: 'Respira',
         description: 'Outdoor bar table and stool',
@@ -70,6 +72,7 @@ export const products1=[
 export const products2=[
     
     {
+        id:5,
         img: pr5,
         name: 'Grifo',
         description: 'Night lamp',
@@ -77,6 +80,7 @@ export const products2=[
     },
     
     {
+        id:6,
         img:  pr6,
         name: ' Muggo',
         price: 'Rp 150.000',
@@ -85,6 +89,7 @@ export const products2=[
     } 
      ,
     {
+        id:7,
         img: pr7,
         name: 'Pingky',
         disPrecent: 50,
@@ -93,6 +98,7 @@ export const products2=[
         description: 'Cute bed set'
     }, 
     {
+        id:8,
         img: pr8,
         name: 'Potty',
         description: 'Minimalist flower pot',
