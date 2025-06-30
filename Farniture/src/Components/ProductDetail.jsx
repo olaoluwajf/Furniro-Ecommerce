@@ -3,7 +3,7 @@ import { FaEllipsisV, FaGreaterThan } from 'react-icons/fa';
 import { products1, products2 } from '../Datas';
 import { FaFacebook, FaTwitter,FaLinkedin } from 'react-icons/fa';
 import Product2 from './Product2'
-import Button from './Button'
+import NButton from './UI/NButton'
 
 import { useState } from 'react';
 const ProductDetail = () => {
@@ -130,10 +130,10 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        <div className='flex flex-col '>
-          <p className='flex flex-col p-3  sm:m-4 mb-2 mt-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem nam. In ducimus debitis magni, expedita eius illo vitae a asperiores voluptas labore eligendi cum, aliquid quod tempore veritatis? Ullam.
+        <div className='flex flex-col lg:ml-30 lg:mr-30 md:ml-20 md:mr-20 justify-center text-center'>
+          <p className='flex flex-col p-3 xl:ml-20 xl:mr-20   sm:m-4 mb-2 mt-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem nam. In ducimus debitis magni, expedita eius illo vitae a asperiores voluptas labore eligendi cum, aliquid quod tempore veritatis? Ullam.
           </p>
-          <p className='flex flex-col mb-2 mt-1 p-3 py-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eum accusamus placeat voluptates dolores, consequatur ullam, ducimus nihil et delectus quaerat. Sunt, dignissimos! Quia rem dolor consectetur eum reprehenderit rerum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quibusdam quae, natus corporis eaque saepe iure eos mollitia laborum assumenda enim maxime provident temporibus excepturi, nobis similique consequuntur nostrum dicta.</p>
+          <p className='flex flex-col xl:ml-20 xl:mr-20  mb-2 mt-1 p-3 py-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eum accusamus placeat voluptates dolores, consequatur ullam, ducimus nihil et delectus quaerat. Sunt, dignissimos! Quia rem dolor consectetur eum reprehenderit rerum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quibusdam quae, natus corporis eaque saepe iure eos mollitia laborum assumenda enim maxime provident temporibus excepturi, nobis similique consequuntur nostrum dicta.</p>
 
           <p>{product.id}</p>
         </div>
@@ -149,10 +149,10 @@ const ProductDetail = () => {
 
       <hr className='gap-y-1 py-3 text-stone-500'/>
 
-      <section cl>
-        <h1>Related Products</h1>
+      <section className='m-2 text-center'>
+        <h1 className='text-3xl font-semibold p-3 text-center'>Related Products</h1>
         <Product2/>
-        <Button/>
+        <NButton name='Show more' />
       </section>
     </div>
   );
