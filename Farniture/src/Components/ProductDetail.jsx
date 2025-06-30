@@ -118,36 +118,38 @@ const ProductDetail = () => {
       </section>
       <hr className='gap-y-1 py-3 text-stone-500'/>
       <section>
-        <div>
-          <div>
-            <h1>Description</h1>
+        <div className='flex flex-col xl:flex-row lg:flex-row gap-1 justify-center p-2 text-center items-center'>
+          <div className='mr-2'>
+            <h1 className='text-2xl p-2 font-semibold px-3'>Description</h1>
           </div>
           <div>
-            <h1>Additional Information </h1>
+            <h1 className='text-2xl text-stone-400 px-3'>Additional Information </h1>
           </div>
           <div>
-            <h1>Reviews([{product.id}])</h1>
+            <h1 className='text-2xl text-stone-400 px-3'>Reviews([{product.id}])</h1>
           </div>
         </div>
 
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem nam. In ducimus debitis magni, expedita eius illo vitae a asperiores voluptas labore eligendi cum, aliquid quod tempore veritatis? Ullam.
+        <div className='flex flex-col '>
+          <p className='flex flex-col p-3  sm:m-4 mb-2 mt-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem nam. In ducimus debitis magni, expedita eius illo vitae a asperiores voluptas labore eligendi cum, aliquid quod tempore veritatis? Ullam.
+          </p>
+          <p className='flex flex-col mb-2 mt-1 p-3 py-1 justify-center text-center lg:text-left xl:text-left text-lg text-stone-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eum accusamus placeat voluptates dolores, consequatur ullam, ducimus nihil et delectus quaerat. Sunt, dignissimos! Quia rem dolor consectetur eum reprehenderit rerum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quibusdam quae, natus corporis eaque saepe iure eos mollitia laborum assumenda enim maxime provident temporibus excepturi, nobis similique consequuntur nostrum dicta.</p>
 
-          <p>{product.description}</p>
+          <p>{product.id}</p>
         </div>
-        <div>
-          <div>
-           <img src={product.img} alt={product.name} />
+        <div className='flex  flex-col lg:flex-row xl:flex-row gap-5 px-2 justify-center mb-3'>
+          <div className='bg-stone-100 p-10'>
+           <img className='h-100 w-140' src={product.img} alt={product.name} />
           </div>
-          <div>
-            <img src={product.img} alt={product.name} />
+          <div className='bg-stone-100 p-10'>
+            <img className='h-100 w-140' src={product.img} alt={product.name} />
           </div>
         </div>
       </section>
 
       <hr className='gap-y-1 py-3 text-stone-500'/>
 
-      <section>
+      <section cl>
         <h1>Related Products</h1>
         <Product2/>
         <Button/>
