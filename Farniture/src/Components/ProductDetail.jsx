@@ -1,18 +1,16 @@
-// ProductDetail.jsx
 import { Link, useParams } from 'react-router-dom';
 import { FaEllipsisV, FaGreaterThan } from 'react-icons/fa';
 import { products1, products2 } from '../Datas';
+import { FaFacebook, FaTwitter,FaLinkedin } from 'react-icons/fa';
+import Product2 from './Product2'
+import Button from './Button'
 
 import { useState } from 'react';
-
 const ProductDetail = () => {
   const { id } = useParams();
   const allProducts = [...products1, ...products2];
-
   const product = allProducts.find(p => p.id === parseInt(id));
-
   const [number, setNumber] = useState(1);
-
   const NumberIncrement = () => {
     setNumber(number + 1);
   };
@@ -34,43 +32,31 @@ const ProductDetail = () => {
 
   return (
     <div>
-      <div className='flex flex-row p-3 gap-x-1 bg-amber-100 items-center '>
-        <Link to='/Home' className='px-1 hover:text-stone-400 text-stone-600'>Home</Link>
+      <div className='flex flex-row p-10 gap-3 m-1 bg-amber-100 items-center '>
+        <Link to='/Home' className='items-center hover:text-stone-500 text-stone-400 text-xl'>Home</Link>
         <FaGreaterThan className='text-[12px]'/>
-        <Link to='/ShopHero' className='px-1 hover:text-stone-400 text-stone-600'>Shop</Link>
-        <FaGreaterThan className='text-[12px] px-'/>
+        <Link to='/ShopHero' className=' hover:text-stone-500 text-stone-400 text-xl items-center'>Shop</Link>
+        <FaGreaterThan className='text-[12px] text-'/>
         <FaEllipsisV/>
-        <span>{product.name}</span> {/* Display product name here */}
+        <span className='text-2xl '>{product.name}</span> 
       </div>
-      <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-2 p-5'>
-        <div className='flex flex-col xl:flex-row lg:flex-row gap-3 gap-x-5 px-4' >
-          <div className='flex flex-col gap-y-3  items-center'>
+      <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-5 justify-center  '>
+        <div className='flex flex-col xl:flex-row lg:flex-col gap-3 gap-x-5 px-4 justify-center text-center' >
+          <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-2 sm:py-2 '>
 
-            <img src={product.img} alt={product.name} className="w-40 p-4 h-40 object-cover border" />
-            <img src={product.img} alt={product.name} className="w-40 p-4 h-40 object-cover border" />
-            <img src={product.img} alt={product.name} className="w-40 p-4 h-40 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
           </div>
 
           <div className='flex flex-col'>
-            <img src={product.img} alt={product.name} className="w-full h-120 object-contain" /> {/* Main Image */}
+            <img src={product.img} alt={product.name} className="w-full h-120 object-contain" /> 
           </div>
         </div>
 
-        <div>
-          <h1 className="text-3xl font-bold">{product.name}</h1>
-          <h3 className="text-2xl font-semibold text-gray-800">Rs.{product.price}</h3>
-          {product.discount && (
-            <span className='px-2 line-through text-gray-500'>
-              Rs.{product.discount}
-            </span>
-          )}
-          {product.disPrecent && (
-             <span className='ml-2 text-red-600 font-bold'>
-               -{product.disPrecent}%
-             </span>
-          )}
-
-
+        <div className='fex flex-col p-3 text-start'>
+          <h1 className="text-3xl  text-stone-800 py-2">{product.name}</h1>
+          <h3 className="text-[17px] p-3 text-stone-400 font-semibold"> {product.price}</h3>
           <div className='flex flex-row items-center gap-2 px-2'>
             <span>Rate</span>
             <FaEllipsisV/>
@@ -78,29 +64,33 @@ const ProductDetail = () => {
           </div>
           <div className='flex text-stone-600 py-2'>
             <p className='flex text-center p-2 '>{product.description}</p>
+            
           </div>
-          {/* You'll need to add logic for size and color based on your product data structure if applicable */}
-          <div className='flex flex-col py-3'>
-            <h1>Size</h1>
-            <div className='flex flex-row items-center gap-1 px-3'>
+          <div>
+            <p className='w-110 lg:w-140  xl:w-160  md:w-80 items-center text-start text-stone-600 flex flex-col sm:text-center sm:justfiy-center xl:text-left'>{product.features} Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero neque nostrum dolorum autem mollitia ut dolore eius aliquid et cumque maxime dolorem ea placeat, voluptatibus architecto ipsam! Voluptas, voluptatem!
+            </p>
+          </div>
+          <div className='flex flex-col py-3 gap-3'>
+            <h1 className='text-stone-700'>Size</h1>
+            <div className='flex flex-row items-center gap-1 px-3 '>
               <Link className='bg-amber-50 border px-2 rounded-sm'>L</Link>
               <Link className='bg-amber-50 border px-2 rounded-sm'>XL</Link>
               <Link className='bg-amber-50 border px-2 rounded-sm'>XS</Link>
             </div>
           </div>
-          <div>
-            <h1>Color</h1>
+          <div className='color gap-y-1'>
+            <h1 className='py-2'>Color</h1>
             <div className='flex gap-1'>
-              <span>Blue </span>
-              <span>Black </span>
-              <span>Yellow </span>
+              <span className=' bg-sky-700 p-[4px] rounded-4xl h-[20px] w-[20px]  '>  </span>
+              <span className=' bg-stone-700 rounded-4xl h-[20px] w-[20px]  '> </span>
+              <span className=' bg-yellow-600 p-[4px] rounded-4xl h-[20px] w-[20px]  '></span>
             </div>
           </div>
-          <div className='flex flex-row p-3 gap-2'>
-            <button className='flex flex-row gap-3 border px-5 py-2 rounded-xl'>
-              <span onClick={NumberDecrement}>-</span>
+          <div className='flex flex-row p-3 gap-2 py-4 mb-5'>
+            <button className='flex flex-row gap-3 border px-5 py-2 rounded-xl items-center'>
+              <span onClick={NumberDecrement} className='px-2 text-lg'>-</span>
               <span>{number}</span>
-              <span onClick={NumberIncrement}>+</span>
+              <span onClick={NumberIncrement} className='px-3 text-lg'>+</span>
             </button>
 
             <button className='border px-5 py-2 rounded-xl cursor-pointer hover:bg-amber-50'>
@@ -111,8 +101,56 @@ const ProductDetail = () => {
               + Compare
             </button>
           </div>
-          <hr className='py-2'/>
+          <hr className=' font-light text-stone-400 py-4'/>
+          <div className='flex flex-col text-stone-400 text-lg gap-2'>
+            <span className='gap-3'>SKU  :  SS001</span>
+            <span className='gap-3'>catagory   :  {product.description} </span>
+            <span className='gap-3'>Tags   :  Sofa,Chair,Home,Shop</span>
+            <span className='flex items-center'>Share   :  
+              <div className='flex flex-row gap-2 p-2 text-black'>
+                <Link className='px-2'> <FaFacebook/> </Link>
+                <Link className='px-2 '> <FaLinkedin/> </Link>
+                <Link className='px-2'> <FaTwitter/> </Link>
+              </div>
+            </span>
+          </div>
         </div>
+      </section>
+      <hr className='gap-y-1 py-3 text-stone-500'/>
+      <section>
+        <div>
+          <div>
+            <h1>Description</h1>
+          </div>
+          <div>
+            <h1>Additional Information </h1>
+          </div>
+          <div>
+            <h1>Reviews([{product.id}])</h1>
+          </div>
+        </div>
+
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, autem nam. In ducimus debitis magni, expedita eius illo vitae a asperiores voluptas labore eligendi cum, aliquid quod tempore veritatis? Ullam.
+
+          <p>{product.description}</p>
+        </div>
+        <div>
+          <div>
+           <img src={product.img} alt={product.name} />
+          </div>
+          <div>
+            <img src={product.img} alt={product.name} />
+          </div>
+        </div>
+      </section>
+
+      <hr className='gap-y-1 py-3 text-stone-500'/>
+
+      <section>
+        <h1>Related Products</h1>
+        <Product2/>
+        <Button/>
       </section>
     </div>
   );
