@@ -6,6 +6,9 @@ const Hero = (props) => {
   return (
     <div className=" p-10 flex flex-col" style={{backgroundImage:`url(${BgCover})`, backgroundSize:'cover', backgroundPosition:'center'}}>
         <div className='p-3 justify-center text-center'>
+            <div className='justify-center flex '>
+              <img src={props.img} />
+            </div>
             <h1 className='text-[35px] py-3 font-bold'>{props.PageName}</h1>
             <div className='flex flex-row gap-1 text-center justify-center items-center'>
                 <Link className='text-[15px] py-3 font-bold' to='/Home'>
