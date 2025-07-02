@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Products from "./Components/Products";
 import ShopHero from "./Components/ShopHero";
 import ProductDetail from "./Components/ProductDetail";
+import Comparison from "./Components/Comparison";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/ShopHero" element={<ShopHero/>} />
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="/shop" element={<Products/>} />
+        <Route path="/Comparison" element={<Comparison/>}/>
       </Routes>
       <Footer/>
     </>
