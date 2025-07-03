@@ -42,7 +42,7 @@ const ProductDetail = () => {
         <span className='text-2xl '>{product.name}</span> 
       </div>
       <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-5 justify-center  '>
-        <div className='flex flex-col xl:flex-row lg:flex-col gap-3 gap-x-5 px-4 justify-center text-center' >
+        <div className='flex flex-col xl:flex-row lg:flex-row gap-3 gap-x-5 px-4 justify-center text-center' >
           <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-2 sm:py-2 '>
 
             <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
