@@ -6,6 +6,8 @@ import Products from "./Components/Products";
 import ShopHero from "./Components/ShopHero";
 import ProductDetail from "./Components/ProductDetail";
 import Comparison from "./Components/Comparison";
+import Contact from "./Components/Contact";
+import About from './Components/About'
 
 
 function App() {
@@ -13,11 +15,13 @@ function App() {
     <>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/Home" element={<Home/>} />
         <Route path="/ShopHero" element={<ShopHero/>} />
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="/shop" element={<Products/>} />
         <Route path="/Comparison" element={<Comparison/>}/>
+        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/About" element={<About/>}/>
       </Routes>
       <Footer/>
     </>
