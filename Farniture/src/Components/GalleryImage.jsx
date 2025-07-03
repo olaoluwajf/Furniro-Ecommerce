@@ -15,35 +15,35 @@ const GalleryImages = () => {
         <p className=''>Share your setup with</p>
         <h1 className='font-bold text-3xl'>#Funiro Furniture</h1>
         
-      <div className='flex flex-col xl:flex-row lg:flex-row lg:gap-1 py-1 justify-center items-center px-1'>
-       <div className=''>
-            <div className='flex px-3 gap-3 items-end'>
-              { 
-               <img src={g1} alt="Image" />}
-               <img src={g3} alt="Image" className='h-[320px] '/>
+      <div className='flex flex-col xl:flex-row lg:flex-row gap-1 py-1 justify-center items-center px-1'>
+       <div className='flex-row sm:flex-col md:flex-col  '>
+            <div className='flex md:flex-row flex-col lg:flex-row xl:flex-row px-3 gap-3 items-end'>
+               
+               <img src={g1} alt="Image" />
+               <img src={g3} alt="Image" className=''/>
                
             </div>
-            <div className='flex px-3 gap-3 py-4 '>
+            <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row   px-3 gap-1 py-4 '>
               <img src={g2} alt="Image" />
-              <img src={g4} alt="Image"  className='h-[250px]'/>
+              <img src={g4} alt="Image"  />
             </div>
         </div>
         
-        <div>
+        <div className='flex flex-col '>
           <img src={g5} alt="Image" />
         </div>
 
         <div>
-          <div className='flex px-3 gap-3 py-3 items-end'>
-            <img src={g7} alt="Image" className='h-[360px] '/>
-            <img src={g9} alt="Image" />
+          <div className='flex flex-col md:flex-row lg:fex-row xl:flex-row px-3 gap-1 py-2 items-end'>
+            <img src={g7} alt="Image" className='h-[360px] sm:h-full sm:w-full'/>
+            <img src={g9} alt="Image" className='flex sm:h-full sm:w-full'/>
             
             
             
           </div>
-          <div className='flex @min-sm:grid px-3 gap-3 '>
-            <img src={g6} alt="Image" />
-            <img src={g8} alt="Image" className='h-[180px]'/>
+          <div className=' flex md:flex-row flex-col lg:flex-row xl:flex-row sm:justify-between md:justify-between @min-sm:grid px-3 gap-3 '>
+            <img src={g6} alt="Image" className='sm:w-full'/>
+            <img src={g8} alt="Image" className='h-[180px] sm:h-full '/>
           </div>
         </div>
       </div>
