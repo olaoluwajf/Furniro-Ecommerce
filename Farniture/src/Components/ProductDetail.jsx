@@ -43,19 +43,19 @@ const ProductDetail = () => {
       </div>
       <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-5 justify-center  '>
         <div className='flex flex-col xl:flex-row lg:flex-row gap-3 gap-x-5 px-4 justify-center text-center' >
-          <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-2 sm:py-2 '>
+          <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-1  '>
 
             <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
             <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
             <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
           </div>
 
-          <div className='flex flex-col'>
+          <div className='flex flex-col lg:gap-1'>
             <img src={product.img} alt={product.name} className="w-full h-120 object-contain" /> 
           </div>
         </div>
 
-        <div className='fex flex-col p-3 text-start'>
+        <div className='fex flex-col p-3 text-start justify-center'>
           <h1 className="text-3xl  text-stone-800 py-2">{product.name}</h1>
           <h3 className="text-[17px] p-3 text-stone-400 font-semibold"> {product.price}</h3>
           <div className='flex flex-row items-center gap-2 px-2'>
@@ -68,7 +68,7 @@ const ProductDetail = () => {
             
           </div>
           <div>
-            <p className='w-110 lg:w-140  xl:w-160  md:w-80 items-center text-start text-stone-600 flex flex-col sm:text-center sm:justfiy-center xl:text-left'>{product.features} Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero neque nostrum dolorum autem mollitia ut dolore eius aliquid et cumque maxime dolorem ea placeat, voluptatibus architecto ipsam! Voluptas, voluptatem!
+            <p className=' flex  text-left sm:w-80 lg:w-140  xl:w-160  md:w-80 items-center text-stone-600 flex-col sm:text-center sm:justfiy-center xl:text-left'>{product.features} Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero neque nostrum dolorum autem mollitia ut dolore eius aliquid et cumque maxime dolorem ea placeat, voluptatibus architecto ipsam! Voluptas, voluptatem!
             </p>
           </div>
           <div className='flex flex-col py-3 gap-3'>
@@ -87,18 +87,18 @@ const ProductDetail = () => {
               <span className=' bg-yellow-600 p-[4px] rounded-4xl h-[20px] w-[20px]  '></span>
             </div>
           </div>
-          <div className='flex flex-row p-3 gap-2 py-4 mb-5'>
-            <button className='flex flex-row gap-3 border px-5 py-2 rounded-xl items-center'>
-              <span onClick={NumberDecrement} className='px-2 text-lg'>-</span>
+          <div className='flex flex-col lg:glex-row xl:flex-row p-3 gap-2 py-4 mb-5'>
+            <button className='flex flex-row gap-3 border px-5 py-2 text-center justify-center rounded-xl items-center '>
+              <span onClick={NumberDecrement} className='px-2 text-lg cursor-pointer rounded-xl hover:bg-amber-100'>-</span>
               <span>{number}</span>
-              <span onClick={NumberIncrement} className='px-3 text-lg'>+</span>
+              <span onClick={NumberIncrement} className='px-3 text-lg cursor-pointer hover:bg-amber-100 rounded-2xl'>+</span>
             </button>
 
-            <button className='border px-5 py-2 rounded-xl cursor-pointer hover:bg-amber-50'>
+            <button className='border px-5 py-2 rounded-xl cursor-pointer justify-center hover:bg-amber-50'>
               Add to cart
             </button>
 
-            <Link to='/Comparison' className='border px-5 py-2 rounded-xl cursor-pointer hover:bg-amber-50'>
+            <Link to='/Comparison' className='border px-5 py-2 justify-center text-center rounded-xl cursor-pointer hover:bg-amber-50'>
               + Compare
             </Link>
           </div>
