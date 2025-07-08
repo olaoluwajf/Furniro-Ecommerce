@@ -1,6 +1,7 @@
 import Hero from './Hero'
-import { useParams } from 'react-router-dom'
+import {Link, useParams } from 'react-router-dom'
 import {products1,products2} from '../Datas'
+import { FiTrash } from 'react-icons/fi'
 import Features from './Features'
 import Logo from '../assets/logo.png'
 
@@ -9,26 +10,43 @@ const Cart = () => {
   const allProducts = [...products1, ...products2];
   const product = allProducts.find(p => p.id === parseInt(id));
   return (
-    <div>
+    <div className='justify-center'>
         <Hero PageName="Cart" img={Logo}/>
-        <div className='ml-4 mr-4 mt-4 flex flex-col lg:flex-row xl:flex-row gap-2'>
-          <div className='flex flex-row gap-5 px-2 text-stone-900 bg-amber-100 p-5'>
-            <span className='px-13 ml-3'>Product</span>
-            <span className='px-4'>Price</span>
-            <span className='px-2 pl-4'>Quantity</span>
-            <span className='px-5'>Subtotal</span>
+        <div className='ml-10 mr-10 mt-4 flex flex-col lg:flex-row xl:flex-row gap-2 justify-center'>
+          <div className='flex flex-col '>
+            <div className='flex flex-row gap-10  text-stone-900 bg-amber-50 p-5 px-30'>
+              <span className='mr-5 ml-5 pl-5 '>Product</span>
+              <span className='px-4'>Price</span>
+              <span className='px-2 pl-4'>Quantity</span>
+              <span className='px-5'>Subtotal</span>
+            </div>
+            <div className='flex flex-row gap-5 pt-5  items-center'>
+              <div className='bg-amber-50 p-3 h-20 w-30 items-center justify-center'>
+                <img src='' alt="img" className='mr-5'/>
+
+              </div>
+              
+              <p className=''>product.name</p>
+              <p>product.price</p>
+              <p className='border p-1'>product.quantity</p>
+              <p>product.subtotal</p>
+              <div>
+                <FiTrash className='text-2xl cursor-pointer hover:text-stone-600'/>
+              </div>
+
+            </div>
 
           </div>
 
-          <div className='flex flex-col p-10 rounded bg-amber-100'>
-            <h1 className='text-center text-2xl py-3 mb-3'>Cart Total</h1>
-            <div className='flex flex-col lg:flex-row xl:flex-row gap-6 p-10'>
+          <div className='flex flex-col rounded bg-amber-50  px-10   '>
+            <h1 className='text-center text-2xl py-1 mb-3 font-bold '>Cart Total</h1>
+            <div className='flex flex-col lg:flex-row xl:flex-row gap-6 ml-3 mt-4 mb-3'>
               <p>SubTotal</p>
               <p>{ }
                 price
               </p>
             </div>
-            <div className='flex flex-col lg:flex-row xl:flex-row gap-6 '>
+            <div className='flex flex-col lg:flex-row xl:flex-row gap-6 ml-3'>
               <p>
                 Total
               </p>
@@ -36,6 +54,12 @@ const Cart = () => {
                 { }
                 total
               </p>
+              
+            </div>
+            <div className='flex-col gap-3 p-10 mt-5'>
+                <Link className='rounded-xl p-2 px-7 border'>
+                  Add to cart
+                </Link>
             </div>
 
           </div>
