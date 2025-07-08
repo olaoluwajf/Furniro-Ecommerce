@@ -8,6 +8,7 @@ import ProductDetail from "./Components/ProductDetail";
 import Comparison from "./Components/Comparison";
 import Contact from "./Components/Contact";
 import About from './Components/About'
+import Cart from "./Components/Cart";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Comparison" element={<Comparison/>}/>
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/About" element={<About/>}/>
+        <Route path="/Cart" element={<Cart/>}/>
       </Routes>
       <Footer/>
     </>
