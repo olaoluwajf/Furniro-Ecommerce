@@ -9,6 +9,7 @@ import Comparison from "./Components/Comparison";
 import Contact from "./Components/Contact";
 import About from './Components/About'
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Contact" element={<Contact/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Cart" element={<Cart/>}/>
+        <Route path="/Checkout" element={<Checkout/>} />
       </Routes>
       <Footer/>
     </>
