@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './Hero'
+import Features from './Features'
 import { FaArrowDown } from 'react-icons/fa'
 
 const Checkout = () => {
@@ -69,7 +70,9 @@ const Checkout = () => {
 
           <div className='side2'>
 
+
           </div>
+          <Features/>
         </div>
     </div>
   )
