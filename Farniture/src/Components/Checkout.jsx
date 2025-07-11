@@ -1,11 +1,9 @@
-import React from 'react'
 import Hero from './Hero'
 import Features from './Features'
-import { FaArrowDown } from 'react-icons/fa'
 
 const Checkout = () => {
   return (
-    <div>
+    <div >
         <Hero PageName='Checkout'/>
         <div className='justify-center '>
           <div className='side1 m-2 justify-center gap-5 '>
@@ -68,9 +66,35 @@ const Checkout = () => {
 
           </div>
 
-          <div className='side2'>
+          <div className='side2 justify-center '>
+            <div className='flex flex-row justify-between'>
+              <div>
+                <h1>Product</h1>
+                <p>Asgaard sofa <span>x 1</span></p>
+                <h1>Subtotal</h1>
+                <h1>Total</h1>
+              </div>
 
+              <div>
+                <h1>Subtotal</h1>
+                <span>Rs.250,000.00</span>
+                <span>Rs. 250,000.00</span>
+                <p>Rs. 250,000.00</p>
+              </div>
+            </div>
+            <hr className='w-full'/>
+            <h1 className='font-semibold text-'>Direct Bank Transfer</h1>
+            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shopped until the funds have cleared in our account</p>
 
+            <ol>
+               <input type="radio" value='Direct Bank Transfer' name='Direct Bank Transfer'/>
+               <input type="radio"  value='Cash On Delivery'/>              
+            </ol>
+            <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className='font-black'>privacy policy</span> .</p>
+
+            <button className='border py-3 px-3 rounded text-stone-800 text-xl text-center justify-center border-stone-500 cursor-pointer mt-5' type='submit'>
+              Place Order
+            </button>
           </div>
           <Features/>
         </div>
