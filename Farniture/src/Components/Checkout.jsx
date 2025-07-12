@@ -6,8 +6,8 @@ const Checkout = () => {
     <div >
         <Hero PageName='Checkout'/>
         <div className='justify-center flex flex-col md:flex-row lg:flex-row xl:flex-row gap-5 p-2 mt-5 '>
-          <div className='side1 m-2 justify-center gap-5 '>
-            <h1 className='text-3xl font-bold flex text-center gap-2 m-4'>Billing details</h1>
+          <div className='side1 m-2 gap-5 '>
+            <h1 className='text-3xl font-bold flex text-center gap-2 m-4 justify-center'>Billing details</h1>
             <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row '>
               <div className='m-2'>
                 <h1 className='m-1'>First Name</h1>
@@ -21,7 +21,7 @@ const Checkout = () => {
 
             <div className='m-2'>
               <h1>Company Name (Optional)</h1>
-              <input type="text" className='w-full md:w-60 lg:w-100 xl:w-150 border-2 rounded border-stone-400 h-15 p-2 text-stone-500' />
+              <input type="text" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 p-2 text-stone-500' />
             </div>
             <div className='m-2 py-2'>
               <h1 className='m-1'>Town/City</h1>
@@ -32,12 +32,12 @@ const Checkout = () => {
 
             <div className='m-2 py-1'>
               <h1 className='m-1'>Street address</h1>
-              <input type="text" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 h-15 text-stone-500' />
+              <input type="text" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 text-stone-500' />
             </div>
 
             <div className='m-2'>
               <h1 className='m-1'>Town/City</h1>
-              <input type="text" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 px-2 h-15 text-stone-500' />
+              <input type="text" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 px-2 h-15 text-stone-500' />
             </div>
 
             <div className='m-2 py-1'>
@@ -49,18 +49,18 @@ const Checkout = () => {
 
             <div className='m-2 py-1'>
               <h1 className='m-1'>Zip code</h1>
-              <input type="text" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 h-15 text-stone-500 px-2' />
+              <input type="text" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 text-stone-500 px-2' />
             </div>
 
             <div className='m-2 py-1'>
               <h1 className='m-1 '>Phone</h1>
-              <input type="text" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 h-15 px-2 text-stone-500' />
+              <input type="text" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 px-2 text-stone-500' />
             </div>
             
             <div className='flex flex-col gap-3 m-2'>
               <h1 className='m-1'>Email</h1>
-              <input type="email" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 h-15 px-2 text-stone-500' />
-              <input type="email" className='w-full md:w-60 lg:w-80 xl:w-100 border-2 rounded border-stone-400 h-15 p-3' placeholder='Additional information ' />
+              <input type="email" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 px-2 text-stone-500' />
+              <input type="email" className='w-full md:w-80 lg:w-100 xl:120 border-2 rounded border-stone-400 h-15 p-3' placeholder='Additional information ' />
             </div>
 
 
