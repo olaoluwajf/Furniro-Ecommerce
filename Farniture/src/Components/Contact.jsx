@@ -20,7 +20,7 @@ const Contact = () => {
               <Link className='flex flex-row gap-2 px-3 py-3 '>
                 <FaLocationArrow className='text-2xl'/>
                 <div className='text-[15px] '>
-                  <h1>Address</h1>
+                  <h1 className='text-xl font-semibold'>Address</h1>
                   <p className='flex w-70'>235 rth SE Avenue, New <br />York NY10000, United <br /> States</p>
                 </div>
       
@@ -28,7 +28,7 @@ const Contact = () => {
               <Link className='flex flex-row gap-2 px-3 py-3 '>
                 <FaPhoneSquare className='text-2xl'/>
                 <div  className='text-[15px] '>
-                  <h1>Phone</h1>
+                  <h1 className='text-xl font-semibold'>Phone</h1>
                 <p>
                   Mobile +(251) 964 - 762
                 </p>
@@ -38,7 +38,7 @@ const Contact = () => {
               <Link className='flex flex-row gap-2 px-3 py-3 '>
                 <FaTimesCircle className='text-2xl'/>
                 <div  className='text-[15px]'>
-                  <h1>Working Time</h1>
+                  <h1 className='text-xl font-semibold'>Working Time</h1>
                   <p>Monday-Friday: 9:00- 22:00</p>
                   <p>Saturday-Sunday: 9:00 - 21:00</p>
                 </div>
