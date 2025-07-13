@@ -5,7 +5,7 @@ const Checkout = () => {
   return (
     <div >
         <Hero PageName='Checkout'/>
-        <div className='justify-center flex flex-col md:flex-row lg:flex-row xl:flex-row gap-5 p-2 mt-5 '>
+        <div className='justify-center flex flex-col md:flex-row lg:flex-row xl:flex-row gap-5 p-2 mt-5 m-10'>
           <div className='side1 m-2 gap-5 '>
             <h1 className='text-3xl font-bold flex text-center gap-2 m-4 justify-center'>Billing details</h1>
             <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row '>
@@ -87,7 +87,7 @@ const Checkout = () => {
             <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shopped until the funds have cleared in our account</p>
 
             <ol className='mt-3 mb-3'>
-               <input type="radio" value='Direct Bank Transfer' name='Direct Bank Transfer' className=''/>
+               <input type="radio" value='Direct Bank Transfer' name='Direct Bank Transfer' className='p-2'/>
                <label className='p-3' htmlFor="">Direct Bank Transfer</label> <br />
                <input type="radio"  value='Cash On Delivery'/>   
                <label className='p-3'htmlFor="" >Cash On Delivery</label>           
@@ -95,11 +95,10 @@ const Checkout = () => {
             <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className='font-black'>privacy policy</span> .</p>
 
             <div className='justify-center text-center'>
-              <button className='border py-3 px-10 rounded text-stone-800 text-xl border-x-black border-stone-500 cursor-pointer mt-5 hover:bg-amber-50 ' type='submit'>
+              <button className='border-2 py-3 px-10 rounded text-stone-800 text-xl border-x-black border-stone-500 cursor-pointer mt-5 hover:bg-amber-50 ' type='submit'>
               Place Order
             </button>
-            </div>
-            
+            </div>            
           </div>
           
         </div>
