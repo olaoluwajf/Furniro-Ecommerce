@@ -10,6 +10,7 @@ import Contact from "./Components/Contact";
 import About from './Components/About'
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
+import Blog from "./Components/Blog";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/About" element={<About/>}/>
         <Route path="/Cart" element={<Cart/>}/>
         <Route path="/Checkout" element={<Checkout/>} />
+        <Route path="/Blog" element={<Blog/>} />
       </Routes>
       <Footer/>
     </>
