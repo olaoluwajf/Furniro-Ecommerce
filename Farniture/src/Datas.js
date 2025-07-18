@@ -113,14 +113,14 @@ export const RoomImages = [
 
 export const BlogPosts =  [
   { id:1, img: recent1,topic: 'Going all-in with millennial design',dayInfo:"May 03 2025 G.C"},
-  { id:5, img: recent5, topic: 'Exploring new ways of decorating',dayInfo:"May 03 2025 G.C"},
-  { id:2, img: recent2, topic: 'Handmade pieces that took time to make',dayInfo:"May 03 2025 G.C"},
-  { id:3, img: recent3, topic: 'Modern home in Milan ',dayInfo:"May 03 2025 G.C"},
-  { id:4, img: recent4, topic: 'Colorful office redesign',dayInfo:"May 03 2025 G.C"},
-  { id:5, img: recent5, topic: 'Going all-in with millennial design',dayInfo:"May 03 2025 G.C"}
+  { id:2, img: recent5, topic: 'Exploring new ways of decorating',dayInfo:"May 03 2025 G.C"},
+  { id:3, img: recent2, topic: 'Handmade pieces that took time to make',dayInfo:"May 03 2025 G.C"},
+  { id:4, img: recent3, topic: 'Modern home in Milan ',dayInfo:"May 03 2025 G.C"},
+  { id:5, img: recent4, topic: 'Colorful office redesign',dayInfo:"May 03 2025 G.C"},
+  { id:6, img: recent5, topic: 'Going all-in with millennial design',dayInfo:"May 03 2025 G.C"}
 ]; 
 export const Posts = [
-  {id:1,header1:"Going all-in with millennial design",img1:post1},
+  {id:1,header:"Going all-in with millennial design",img:post1},
   {id:2,header: "Exploring new ways of decorating",img:post2},
   {id:3,header:"Handmade pieces that took time to make",img:post3},
 ];
