@@ -3,7 +3,7 @@ import { FiUser, FiCalendar,FiTag } from 'react-icons/fi'
 
 const BlogDescription = () => {
   return (
-    <div className='flex flex-row gap-5 items-center text-gray-500 text-sm m-4'>
+    <div className='flex flex-row gap-5 items-center justify-center text-gray-500 text-sm m-4'>
         <FiUser/>
         <span className='text-sm text-gray-500'> Admin</span>
         <FiCalendar />
