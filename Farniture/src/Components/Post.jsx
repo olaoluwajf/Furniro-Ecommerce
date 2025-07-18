@@ -6,7 +6,7 @@ const Post = () => {
   return (
     <>
     {Posts.map((post) => (
-    <Link  className='mt-10 mb-10 flex flex-col rounded-lg'>
+    <Link key={post.id}  className='mt-10 mb-10 flex flex-col rounded-lg'>
       <img src={post.img} alt="" />
       <BlogDescription  />
       <h1 className='text-2xl m-3'>{post.header}</h1>
