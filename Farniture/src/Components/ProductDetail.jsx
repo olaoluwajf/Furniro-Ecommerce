@@ -3,11 +3,13 @@ import { FaEllipsisV, FaGreaterThan } from 'react-icons/fa';
 import { products1, products2 } from '../Datas';
 import { FaFacebook, FaTwitter,FaLinkedin } from 'react-icons/fa';
 import Product2 from './Product2'
-import NButton from './UI/NButton'
+import Button from './Button'
 
 import { useState } from 'react';
 import ProductDescription from './ProductDescription';
+
 const ProductDetail = () => {
+  
   const { id } = useParams();
   const allProducts = [...products1, ...products2];
   const product = allProducts.find(p => p.id === parseInt(id));
@@ -31,6 +33,10 @@ const ProductDetail = () => {
     );
   }
 
+  const AddToCart =() => {
+
+  }
+
   return (
     <div>
       <div className='flex flex-row p-10 gap-3 m-1 bg-amber-100 items-center '>
@@ -41,17 +47,17 @@ const ProductDetail = () => {
         <FaEllipsisV/>
         <span className='text-2xl '>{product.name}</span> 
       </div>
-      <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-5 justify-center  '>
-        <div className='flex flex-col xl:flex-row lg:flex-row gap-3 gap-x-5 px-4 justify-center text-center' >
-          <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-1  '>
+      <section className='flex flex-col xl:flex-row lg:flex-row gap-2 gap-x-5 p-5 items-center justify-center  '>
+        <div className='flex flex-col xl:flex-row lg:flex-row gap-3 gap-x-5 px-4 justify-center  text-center w-[70%]' >
+          <div className='flex flex-row  gap-y-3 lg:flex-col xl:flex-col sm:gap-1  m-3 full'>
 
-            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
-            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
-            <img src={product.img} alt={product.name} className="w-30 p-4 h-30 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-40 p-4 h-30 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-40 p-4 h-30 object-cover border" />
+            <img src={product.img} alt={product.name} className="w-40 p-4 h-30 object-cover border" />
           </div>
 
-          <div className='flex flex-col lg:gap-1'>
-            <img src={product.img} alt={product.name} className="w-full h-120 object-contain" /> 
+          <div className='flex flex-col lg:gap-1 w-full'>
+            <img src={product.img} alt={product.name} className="w-full h-120 object-contain " /> 
           </div>
         </div>
 
@@ -68,7 +74,7 @@ const ProductDetail = () => {
             
           </div>
           <div>
-            <p className=' flex  text-left sm:w-80 lg:w-140  xl:w-160  md:w-80 items-center text-stone-600 flex-col sm:text-center sm:justfiy-center xl:text-left'>{product.features} Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero neque nostrum dolorum autem mollitia ut dolore eius aliquid et cumque maxime dolorem ea placeat, voluptatibus architecto ipsam! Voluptas, voluptatem!
+            <p className=' flex  text-left  items-center text-stone-600 flex-col sm:text-center sm:justfiy-center xl:text-left'>{product.features} Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero neque nostrum dolorum autem mollitia ut dolore eius aliquid et cumque maxime dolorem ea placeat, voluptatibus architecto ipsam! Voluptas, voluptatem!
             </p>
           </div>
           <div className='flex flex-col py-3 gap-3'>
@@ -87,18 +93,18 @@ const ProductDetail = () => {
               <span className=' bg-yellow-600 p-[4px] rounded-4xl h-[20px] w-[20px]  '></span>
             </div>
           </div>
-          <div className='flex flex-col lg:glex-row xl:flex-row p-3 gap-2 py-4 mb-5'>
-            <button className='flex flex-row gap-3 border px-5 py-2 text-center justify-center rounded-xl items-center '>
-              <span onClick={NumberDecrement} className='px-2 text-lg cursor-pointer rounded-xl hover:bg-amber-100'>-</span>
-              <span>{number}</span>
-              <span onClick={NumberIncrement} className='px-3 text-lg cursor-pointer hover:bg-amber-100 rounded-2xl'>+</span>
+          <div className='flex flex-col lg:flex-row xl:flex-row p-3 gap-2 py-4 mb-5 items-center '>
+            <button className='flex flex-row gap-3 border px-5 py-2 text-center justify-center w-50 rounded-xl items-center '>
+              <span onClick={NumberDecrement} className='px-2 text-2xl font-bold cursor-pointer rounded-xl hover:bg-amber-100'>-</span>
+              <span className='text-lg font-bold'>{number}</span>
+              <span onClick={NumberIncrement} className='px-3 text-2xl cursor-pointer hover:bg-amber-100 rounded-2xl'>+</span>
             </button>
 
-            <button className='border px-5 py-2 rounded-xl cursor-pointer justify-center hover:bg-amber-50'>
+            <Link to='' onClick={AddToCart}  className='border px-5 py-2 rounded-xl cursor-pointer justify-center hover:bg-amber-50 w-50 text-center'>
               Add to cart
-            </button>
+            </Link>
 
-            <Link to='/Comparison' className='border px-5 py-2 justify-center text-center rounded-xl cursor-pointer hover:bg-amber-50'>
+            <Link to='/Comparison' className='border px-5 py-2 justify-center text-center rounded-xl cursor-pointer w-50  hover:bg-amber-50'>
               + Compare
             </Link>
           </div>
@@ -126,7 +132,7 @@ const ProductDetail = () => {
       <section className='m-2 text-center'>
         <h1 className='text-3xl font-semibold p-3 text-center'>Related Products</h1>
         <Product2/>
-        <NButton name='Show more' />
+        <Button name='Show more' />
       </section>
     </div>
   );
