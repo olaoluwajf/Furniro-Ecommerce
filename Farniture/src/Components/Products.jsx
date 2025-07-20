@@ -6,10 +6,9 @@ const Products= () =>{
   const allDatas=[...products1, ...products2];
   return (
   <div className='justify-center px-5 py-5'>
-    <Link to='/ProductDetail' className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4">
-      {allDatas.map((item, index) => (
-       <div className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-       key={index}
+    <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4 "> 
+      {allDatas.map((item) => (
+       <Link to={`/product/${item.id}`} key={item.id} className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
        >
         <div className="relative z-0" >
           <img 
@@ -19,12 +18,12 @@ const Products= () =>{
           />
         </div>
         {item.new && (
-          <span className='p-3 absolute bg-green-400 text-center text-white top-3 right-3 px-2 py-1 rounded-4xl w-[48px] h-[48px] z-32 font-bold justify-center'>
+          <span className='p-3 absolute bg-green-400 text-center text-white top-3 right-3 px-2 py-3 rounded-4xl w-[48px] h-[48px] z-32 font-bold justify-center'>
             new
           </span>  
         )}
         {item.disPrecent && (
-          <div className='p-3 absolute bg-red-700 text-center  text-white top-3 right-3 px-2 py-1 rounded-4xl w-[48px] h-[45px] z-32 font-bold justify-center'>
+          <div className='p-3 absolute bg-red-700 text-center  text-white top-3 right-3 px-2 py-2 rounded-4xl w-[48px] h-[45px] z-32 font-bold justify-center'>
             -{item.disPrecent}%
           </div>
         )}
@@ -44,9 +43,9 @@ const Products= () =>{
         </div>
 
         <AddToCart/>
-      </div>
+      </Link>
      ))}
-    </Link>
+    </div>
   </div>
 );
 }
