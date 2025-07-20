@@ -19,28 +19,28 @@ const GalleryImages = () => {
        <div className='flex-col gap-1 '>
             <div className='flex md:flex-row flex-col lg:flex-row xl:flex-row  gap-2 items-end'>
                
-               <img src={g1} alt="Image" className='md:w-[100%] lg:w-20 xl:w-[100%]'/>
-               <img src={g3} alt="Image" className='md:w-[100%] lg:w-90 xl:w-[100%]'/>
+               <img src={g1} alt="Image" className='md:w-[100%] lg:w-15 xl:w-30'/>
+               <img src={g3} alt="Image" className='md:w-[100%] lg:w-70 xl:w-150'/>
                
             </div>
-            <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row md:items-end xl:items-start gap-2 mb-2 mt-2 '>
-              <img src={g2} alt="Image" className='w-full md:w-[100%]lg:w-60 xl:w-50' />
-              <img src={g4} alt="Image" className='w-full md:w-[100%] lg:w-60 xl:w-[100%]' />
+            <div className='flex flex-col md:flex-row items-start lg:flex-row xl:flex-row md:items-start lg:items-start xl:items-start gap-2 mb-2 mt-2 '>
+              <img src={g2} alt="Image" className='w-full md:w-[90%] lg:w-40 xl:w-50' />
+              <img src={g4} alt="Image" className='w-full h-60 lg:h-70 xl:h-70 md:w-[70%] lg:w-45 xl:w-[70%]' />
             </div>
         </div>
         
         <div className='gap-2 m-2 flex flex-col items-center'>
-          <img src={g5} alt="Image" className='w-full md:w-[100%] lg:w-50 xl:w-60 justify-center' />
+          <img src={g5} alt="Image" className='w-full md:w-[100%] lg:w-50 xl:w-70 justify-center' />
         </div>
 
         <div className='gap-2 flex flex-col '>
           <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row gap-2 items-end '>
-            <img src={g7} alt="Image" className= 'h-[350px] lg:h-[330px] w-full md:w-[100%] lg:w-60 xl:w-60 '/>
-            <img src={g9} alt="Image" className='  md:w-[100%] lg:w-75 xl:w-75 lg:h-100'/>
+            <img src={g7} alt="Image" className= 'h-[350px] lg:h-[260px] w-full md:w-[100%] lg:w-50 xl:w-80 '/>
+            <img src={g9} alt="Image" className='  md:w-[100%] lg:w-50 xl:w-90 lg:h-80'/>
           </div>
-          <div className=' flex md:flex-row flex-col lg:flex-row xl:flex-row   px-3 gap-2 items-start justify-start'>
-            <img src={g6} alt="Image" className='sm:w-full h-[280px] md:w-[100%] lg:w-70'/>
-            <img src={g8} alt="Image" className='sm:h-full md:w-[100%] lg:w-70'/>
+          <div className=' flex md:flex-row flex-col lg:flex-row xl:flex-row gap-2 items-start justify-start'>
+            <img src={g6} alt="Image" className='sm:w-full xl:h-[310px] lg:h-[280px] md:w-[90%] lg:w-50 xl:w-75'/>
+            <img src={g8} alt="Image" className='sm:h-full md:w-[90%] lg:w-50 xl:w-85 '/>
           </div>
         </div>
       </div>
