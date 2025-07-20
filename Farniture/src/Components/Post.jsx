@@ -15,7 +15,7 @@ const Post = () => {
           Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Doloribus, cumque.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque.
       </p>
 
-      <Link to='/Post ' className='font-bold text-lg hover:underline underline p-2 m-4'>
+      <Link to='/Post' className='font-bold text-lg hover:underline underline p-2 m-4'>
               Read more
       </Link>
     </Link>
