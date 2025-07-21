@@ -1,7 +1,7 @@
 
-import catimg1 from './assets/catimg1.png';
-import Rectangle25 from './assets/Living.png';
-import Rectangle26 from './assets/Bedroom.png';
+import r1 from './assets/catimg1.png';
+import r2 from './assets/Living.png';
+import r3 from './assets/Bedroom.png';
 
 import pr1 from './assets/proimg1.png';
 import pr3 from './assets/proimg3.png';
@@ -28,9 +28,9 @@ import post2 from "./assets/Rectangle 68 (1).png";
 import post3 from "./assets/Rectangle 68 (2).png";
 
 export const Rooms = [
-  { name: 'Dining', img1: catimg1 },
-  { name: 'Living', img2: Rectangle25 },
-  { name: ' Bedroom', img3: Rectangle26 }
+  {id:1, name: 'Dining', img: r1 },
+  {id:2, name: 'Living', img: r2 },
+  {id:3, name: ' Bedroom', img: r3 }
 ];
 
 export const products1 = [
