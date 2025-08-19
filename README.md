@@ -1,1 +1,1 @@
-# Farniture Website
+Furniro E-commerce website
