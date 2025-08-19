@@ -7,7 +7,6 @@ import ShopHero from "./Components/ShopHero";
 import ProductDetail from "./Components/ProductDetail";
 import Comparison from "./Components/Comparison";
 import Contact from "./Components/Contact";
-import About from './Components/About'
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import Blog from "./Components/Blog";
@@ -24,7 +23,6 @@ function App() {
         <Route path="/shop" element={<Products/>} />
         <Route path="/Comparison" element={<Comparison/>}/>
         <Route path="/Contact" element={<Contact/>}/>
-        <Route path="/About" element={<About/>}/>
         <Route path="/Cart" element={<Cart/>}/>
         <Route path="/Checkout" element={<Checkout/>} />
         <Route path="/Blog" element={<Blog/>} />
