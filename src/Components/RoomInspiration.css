@@ -1,0 +1,140 @@
+.room-inspiration {
+  background-color: #fef3c7; /* amber-50 */
+  padding: 48px 8px;
+}
+
+.room-inspiration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.room-inspiration-text h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.room-inspiration-text p {
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.room-inspiration-gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 384px;
+}
+
+.room-image {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.prev-image img {
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.current-image {
+  left: 0;
+  width: 80%;
+  z-index: 10;
+}
+
+.current-image img {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.room-image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.room-image-info span {
+  color: #6b7280; /* gray-500 */
+}
+
+.room-image-info h3 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.room-image-info p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.next-image {
+  right: 0;
+  width: 33%;
+  transform: translateX(16px);
+}
+
+.next-image img {
+  width: 100%;
+  height: 224px;
+  object-fit: cover;
+  opacity: 0.7;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: white;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.next-button:hover {
+  background: #f3f4f6; /* gray-100 */
+}
+
+.next-button svg {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .room-inspiration-container {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .room-inspiration-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .room-inspiration-gallery {
+    flex: 1;
+    height: 384px;
+  }
+}

@@ -4,39 +4,34 @@ import { FaSearch } from "react-icons/fa";
 import Post from "./Post";
 import Features from "./Features";
 import { Link } from "react-router-dom";
-import { Posts } from '../Datas'
+import "./Blog.css";
 
 const Blog = () => {
   return (
     <div>
       <Hero PageName="Blog" />
-      <div className="flex flex-col lg:flex-row xl:flex-row  justify-center gap-5 m-5 mt-20">
-        <div className="side1  ">
-          <div className="">
-            <Post/>
-          </div>
+      <div className="blog-container">
+        <div className="side1">
+          <Post />
         </div>
-        <div className="side2 flex flex-col gap-5 w-full md:w-[60%] lg:w-[30%] p-3 ml- xl:w-[40%] ">
-          <div className="w-[80%] ">
-            <div className="flex flex-row  w-full  items-center justify-center gap-4 m-5 ">
-              <input
-                type="text"
-                className="border justify-center w-full p-4 rounded-xl text-gray-500"
-              />
-              <span className=" ">
-                <FaSearch className="font-light text-2xl justify-center text-center items-center" />
+        <div className="blog-side2">
+          <div className="w-[80%]">
+            <div className="search-container">
+              <input type="text" className="search-input" />
+              <span>
+                <FaSearch className="font-light text-2xl" />
               </span>
             </div>
-            <h1 className="text-3xl font-semibold ml-10">Categories</h1>
-            <div className="flex flex-row gap-5 mt-10 m-4 ml-5">
-              <div className="flex flex-col  gap-12 w-full xl:w-[45%] lg:w-[45%]  text-gray-500">
+            <h1 className="categories-title">Categories</h1>
+            <div className="categories-list">
+              <div>
                 <span>Crafts</span>
                 <span>Design</span>
                 <span>Handmade</span>
                 <span>Interior</span>
                 <span>Wood</span>
               </div>
-              <div className="flex flex-col gap-12 text-gray-500 ">
+              <div>
                 <span>2</span>
                 <span>8</span>
                 <span>7</span>
@@ -45,17 +40,15 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-full lg:w-[43%]">
-            <h1 className="font-bold text-2xl m-3">Recent Photos</h1>
-            <div className="m-4 mb-6 flex flex-col  gap-5">
+          <div className="recent-photos">
+            <h1 className="recent-title">Recent Photos</h1>
+            <div className="recent-list">
               {BlogPosts.map((item) => (
-                <Link className="flex flex-row items-center text-left">
+                <Link className="recent-item">
                   <img src={item.img} alt="" />
-                  <div className="flex flex-col  items-center ">
-                    <h2 className="font-semibold w-40 m-2 mb-1">
-                      {item.topic}
-                    </h2>
-                    <span className="text-sm w-30 flex">{item.dayInfo}</span>
+                  <div className="recent-item-content">
+                    <h2 className="recent-item-title">{item.topic}</h2>
+                    <span className="recent-item-date">{item.dayInfo}</span>
                   </div>
                 </Link>
               ))}

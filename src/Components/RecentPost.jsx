@@ -3,48 +3,47 @@ import { BlogPosts } from "../Datas";
 import { Link, useParams } from "react-router-dom";
 import Features from "./Features";
 import BlogDescription from "./BlogDescription";
+import './RPost.css';
 
 const RPost = () => {
   const { id } = useParams();
   const post = BlogPosts.find((p) => p.id === parseInt(id));
+
   if (!post) {
     return (
-      <div className="p-5 text-center text-red-600">
+      <div className="error-message">
         Post not found. Please check the URL or return to the blog.
-        <Link to="/Blog" className="block mt-4 text-blue-500 hover:underline">
+        <Link to="/Blog" className="error-link">
           Go to Blog
         </Link>
       </div>
     );
   }
+
   return (
     <div>
       <Hero PageName="Post" />
-      <Link className="mt-10 mb-10 flex flex-col rounded-lg w-full justify-center ">
-        <h1 className="text-5xl font-bold m-10 text-center">{post.topic}</h1>
-        <div className="justify-center">
-          <img src={post.img} alt="" className="w-[500px] justify-self-center"/>
-          <BlogDescription  />
+      <div className="post-container">
+        <h1 className="post-title">{post.topic}</h1>
+        <div className="post-image-container">
+          <img src={post.img} alt="" className="post-image"/>
+          <BlogDescription />
         </div>
-        
-        <p className="text-gray-500 m-5 text-center">
+        <p className="post-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-          aliquid doloremque, <br /> in suscipit voluptates eos fugiat ratione
-          architecto vitae omnis delectus sunt esse nesciunt beatae <br /> modi,
+          aliquid doloremque, in suscipit voluptates eos fugiat ratione
+          architecto vitae omnis delectus sunt esse nesciunt beatae modi,
           incidunt cupiditate dolore. Doloribus. Lorem ipsum dolor sit amet
-          consectetur <br /> adipisicing elit. Doloribus, cumque. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Doloribus, cumque.
+          consectetur adipisicing elit. Doloribus, cumque. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Doloribus, cumque.
         </p>
 
-        <Link
-          to="/Post "
-          className="font-bold text-lg text-center hover:underline underline p-2 m-4"
-        >
+        <Link to="/Post" className="read-more-link">
           Read more
         </Link>
-      </Link>
-      
-      <Features/>
+      </div>
+
+      <Features />
     </div>
   );
 };

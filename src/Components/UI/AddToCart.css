@@ -1,0 +1,50 @@
+.addtocart-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.addtocart-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+.addtocart-button {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  padding: 8px 32px;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.addtocart-button:hover {
+  background-color: #e5e7eb; /* gray-100 */
+}
+
+.addtocart-actions {
+  display: flex;
+  gap: 24px;
+  color: white;
+}
+
+.addtocart-action {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.addtocart-action:hover {
+  color: #e5e7eb; /* gray-200 */
+}

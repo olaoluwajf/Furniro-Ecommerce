@@ -1,26 +1,25 @@
-import { Link } from 'react-router-dom'
-import {Rooms} from '../Datas'
+import { Link } from 'react-router-dom';
+import { Rooms } from '../Datas';
+import './Room.css';
 
 const Room = () => {
   return (
-    <div>
-      <div className="container mx-auto">
-          <h1 className='text-3xl font-bold text-center mb-8'>Browse the Range</h1>
-          <p className="text-center ">Choose your favorite. Enjoy comfortable sleep</p>
-        </div>
-      <div className='flex flex-col justify-center  xl:flex-row lg:flex-row text-center items-center px-4 py-4'>
-        {Rooms.map((item, index)=> 
-        (
-          <Link to={`/room/${item.id}`}  key={index} className='px-3 items-center'>
-            <img src={item.img} alt={item.name} />
-            <p className='py-4 text-center font-bold'>{item.name}</p>
-          </Link> 
-        ))
+    <div className="room-section">
+      <div className="room-header">
+        <h1>Browse the Range</h1>
+        <p>Choose your favorite. Enjoy comfortable sleep</p>
+      </div>
 
-        }
+      <div className="room-grid">
+        {Rooms.map((item) => (
+          <Link to={`/room/${item.id}`} key={item.id} className="room-item">
+            <img src={item.img} alt={item.name} />
+            <p>{item.name}</p>
+          </Link>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Room
+export default Room;

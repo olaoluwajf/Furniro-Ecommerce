@@ -1,0 +1,43 @@
+/* Button.css */
+
+.btn {
+  border-radius: 0.25rem;       /* rounded */
+  font-size: 0.875rem;          /* text-sm */
+  background-color: #d97706;    /* bg-amber-600 */
+  color: #fff;                  /* text-white */
+  font-weight: 700;             /* font-bold */
+  border: 1px solid #d97706;    /* border-[1px] */
+  padding: 0.75rem 1rem;        /* py-3 px-4 */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #b45309;    /* hover:bg-amber-700 */
+}
+
+/* Responsive paddings */
+@media (min-width: 640px) {  /* sm */
+  .btn {
+    font-size: 0.875rem;       /* sm:text-sm */
+    padding: 1rem 1rem;        /* sm:py-4 sm:px-4 */
+  }
+}
+
+@media (min-width: 768px) {  /* md */
+  .btn {
+    padding: 0.75rem 1.5rem;   /* md:px-6 */
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .btn {
+    padding: 0.75rem 2rem;     /* lg:px-8 */
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .btn {
+    padding: 0.75rem 2.5rem;   /* xl:px-10 */
+  }
+}

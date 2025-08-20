@@ -1,0 +1,67 @@
+.room-section {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.room-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.room-header p {
+  font-size: 16px;
+  color: #4b5563; /* gray-700 */
+}
+
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.room-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.room-item img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.room-item img:hover {
+  transform: scale(1.05);
+}
+
+.room-item p {
+  margin-top: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .room-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .room-item img {
+    width: 100%;
+    height: auto;
+  }
+}

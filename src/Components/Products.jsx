@@ -1,53 +1,38 @@
 import { products1, products2 } from '../Datas';
 import AddToCart from './UI/AddToCart';
 import { Link } from 'react-router-dom';
+import './Products.css';
 
-const Products= () =>{
-  const allDatas=[...products1, ...products2];
+const Products = () => {
+  const allDatas = [...products1, ...products2];
+
   return (
-  <div className='justify-center px-5 py-5'>
-    <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center px-4 "> 
-      {allDatas.map((item) => (
-       <Link to={`/product/${item.id}`} key={item.id} className="relative group overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
-       >
-        <div className="relative z-0" >
-          <img 
-            src={item.img} 
-            alt={item.name} 
-            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-        {item.new && (
-          <span className='p-3 absolute bg-green-400 text-center text-white top-3 right-3 px-2 py-3 rounded-4xl w-[48px] h-[48px] z-32 font-bold justify-center'>
-            new
-          </span>  
-        )}
-        {item.disPrecent && (
-          <div className='p-3 absolute bg-red-700 text-center  text-white top-3 right-3 px-2 py-2 rounded-4xl w-[48px] h-[45px] z-32 font-bold justify-center'>
-            -{item.disPrecent}%
-          </div>
-        )}
+    <div className="products-container">
+      <div className="products-grid">
+        {allDatas.map((item) => (
+          <Link to={`/product/${item.id}`} key={item.id} className="product-card">
+            <div className="product-image">
+              <img src={item.img} alt={item.name} />
+            </div>
 
-        <div className="p-4">
-          <h3 className="font-semibold">{item.name}</h3>
-          <p className="text-gray-600">{item.description}</p>
-          <div className="mt-1">
-            <span className="font-bold">{item.price}</span>
-            {item.discount && 
-                (<span className=' px-4 line-through'>
-                  {item.discount}
-                 </span>
-                )
-            }
-          </div>
-        </div>
+            {item.new && <span className="badge-new">new</span>}
+            {item.disPrecent && <span className="badge-discount">-{item.disPrecent}%</span>}
 
-        <AddToCart/>
-      </Link>
-     ))}
+            <div className="product-details">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="price-section">
+                <span className="price">{item.price}</span>
+                {item.discount && <span className="discount">{item.discount}</span>}
+              </div>
+            </div>
+
+            <AddToCart />
+          </Link>
+        ))}
+      </div>
     </div>
-  </div>
-);
-}
+  );
+};
 
 export default Products;

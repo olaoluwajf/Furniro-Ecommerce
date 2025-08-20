@@ -1,55 +1,59 @@
 import Products from "./Products";
+import Product2 from "./Product2";
 import Button from "./Button";
-import Room from './Room'
+import Room from './Room';
 import GalleryImages from "./GalleryImage";
 import RoomInspiration from "./RoomInspiration";
-import Product2 from "./Product2";
-
+import './Home.css';
 
 const Home = () => {
   return (
-    <div className="relative">
-      <section className="relative bg-[url('./assets/hero.png')] bg-cover bg-center w-full min-h-screen">
-
-        <div className="absolute inset-0 bg-black/30"></div>  
-        
-        <div className="container mx-auto relative z-10 h-full flex items-center">
-          <div className=" hero-background p-8 rounded-2xl max-w-lg ml-auto mr-10 my-25 space-y-12">
-            <h5 className='text-lg font-medium text-gray-600'>New Arrival</h5>
-            <h1 className="h1-color text-4xl md:text-5xl font-bold tracking-tight">Discover Our New Collection</h1> 
-            <p className="text-gray-600">
+    <div className="home-container">
+      
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-overlay"></div>
+        <div className="hero-content container">
+          <div className="hero-text">
+            <h5 className="hero-subtitle">New Arrival</h5>
+            <h1 className="hero-title">Discover Our New Collection</h1>
+            <p className="hero-description">
               Discover premium furniture crafted for modern living. Explore
               our curated collection of sofas, beds, tables, and more—blending 
               timeless design with exceptional quality.
             </p>
-            <button className="bg-colors space-x-4 px-6 py-4 rounded-[5px] text-white text-lg font-bold transition-colors cursor-pointer">
+            <button className="hero-button">
               Buy now
-            </button> 
+            </button>
           </div>
         </div>
       </section>
-      <div className="  text-center justify-center px-4 py-4 ">
-           <Room />
-      </div>
-      <div className='justify-center px-5 py-5'>
-        <div className='justify-center text-center text-5xl font-bold py-4 mb-5'>
-        <h1>Our Products</h1>
-        </div>
-        <Products/>
-        <Product2/>
-          <div className='justify-center text-center p-5 '>
-        <Button name='Show more'/>
-        </div>
-      </div>
-      <div>
-        <RoomInspiration/>
-      </div>
-      <div>
-        <GalleryImages/>
+
+      {/* Room Section */}
+      <div className="section-wrapper">
+        <Room />
       </div>
 
+      {/* Products Section */}
+      <div className="section-wrapper">
+        <div className="section-header">
+          <h1>Our Products</h1>
+        </div>
+        <Products />
+        <Product2 />
+        <div className="show-more-btn">
+          <Button name='Show more'/>
+        </div>
+      </div>
+
+      {/* Room Inspiration Section */}
+      <RoomInspiration />
+
+      {/* Gallery Section */}
+      <GalleryImages />
+
     </div>
-  )
-}
+  );
+};
 
 export default Home;

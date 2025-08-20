@@ -1,4 +1,8 @@
 @import "tailwindcss";
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .h1-color{
     color: #B88E2F;
 }

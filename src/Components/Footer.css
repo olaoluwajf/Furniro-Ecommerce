@@ -1,0 +1,123 @@
+.footer-container {
+  background-color: #d4d4d4; /* stone-300 */
+  padding: 3rem 1rem;
+  color: #3f3f3f; /* stone-600 */
+  font-family: sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f59e0b; /* amber-500 */
+  margin-left: 0.5rem;
+}
+
+.footer-address {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.footer-links h3,
+.footer-help h3,
+.footer-newsletter h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul,
+.footer-help ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-help li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li a,
+.footer-help li a {
+  color: #3f3f3f;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover,
+.footer-help li a:hover {
+  color: #f59e0b; /* amber-600 */
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-bottom: 2px solid #9ca3af; /* stone-400 */
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.footer-newsletter input:focus {
+  border-bottom-color: #f59e0b; /* amber-600 */
+}
+
+.footer-newsletter button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-bottom: 2px solid #9ca3af;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.footer-newsletter button:hover {
+  border-bottom-color: #f59e0b;
+  background-color: #f59e0b;
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #3f3f3f;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  text-align: left;
+}

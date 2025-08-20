@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './NButton.css';
 
-const NButton = ({name}) => {
+const NButton = ({ name }) => {
   return (
-    <div>
-        <button className='bg-amber-100 p-4 rounded-md m-1'>
-            {name}
-        </button>
+    <div className="nbutton-wrapper">
+      <button className="nbutton">{name}</button>
     </div>
-  )
-}
+  );
+};
 
-export default NButton
+export default NButton;

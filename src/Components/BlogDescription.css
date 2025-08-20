@@ -1,0 +1,17 @@
+/* BlogDescription.css */
+
+.blog-description {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;       /* gap-5 */
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;     /* text-gray-500 */
+  font-size: 0.875rem; /* text-sm */
+  margin: 1rem;       /* m-4 */
+}
+
+.blog-description span {
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280;     /* text-gray-500 */
+}
