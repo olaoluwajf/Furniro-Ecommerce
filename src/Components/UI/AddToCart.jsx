@@ -1,22 +1,26 @@
-import { FiShare, FiHeart } from 'react-icons/fi';
-import { FaExchangeAlt } from 'react-icons/fa';
-import { useCart } from '../CartContext';
+import { FiShare, FiHeart } from "react-icons/fi";
+import { FaExchangeAlt } from "react-icons/fa";
+import { useCart } from "../CartContext";
 
 const AddToCart = ({ product }) => {
   const { cart, toggleCartItem } = useCart();
-  const inCart = cart.some(item => item.id === product.id);
+  const inCart = cart.some((item) => item.id === product?.id);
 
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 
-                    bg-black/0 group-hover:bg-black/60 opacity-0 group-hover:opacity-100 
-                    transition-all duration-300">
-      
+    <div
+      className="absolute inset-0 flex flex-col items-center justify-center gap-4 
+                 bg-black/0 group-hover:bg-black/60 opacity-0 group-hover:opacity-100 
+                 transition-all duration-300"
+    >
       <button
-        onClick={(e) => { e.preventDefault(); toggleCartItem(product); }}
+        onClick={(e) => {
+          e.preventDefault();
+          toggleCartItem(product);
+        }}
         className="bg-white text-black font-medium py-4 px-10 
                    hover:bg-gray-100 transition-colors duration-200 shadow-lg"
       >
-        {inCart ? 'Remove from Cart' : 'Add to Cart'}
+        {inCart ? "Remove from Cart" : "Add to Cart"}
       </button>
 
       <div className="flex gap-6 text-white">

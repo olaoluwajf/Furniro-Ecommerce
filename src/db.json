@@ -1,0 +1,100 @@
+{
+  "Rooms": [
+    { "id": 1, "name": "Dining", "img": "/catimg1.png" },
+    { "id": 2, "name": "Living", "img": "/Living.png" },
+    { "id": 3, "name": "Bedroom", "img": "/Bedroom.png" }
+  ],
+
+  "products1": [
+    {
+      "id": 1,
+      "img": "/proimg1.png",
+      "name": "Syltherine",
+      "price": "Rp 1.500.000",
+      "disPrecent": 30,
+      "discount": "Rp 3.500.000",
+      "description": "Stylish Cafe Chair"
+    },
+    {
+      "id": 2,
+      "img": "/proimg1.png",
+      "name": "Leviosa",
+      "price": "Rp 2.500.000",
+      "description": "Stylish Cafe Chair"
+    },
+    {
+      "id": 3,
+      "img": "/proimg3.png",
+      "name": "Lolito",
+      "price": "Rp 7.000.000",
+      "discount": "Rp 14.000.000",
+      "disPrecent": 50,
+      "description": "Luxury big sofa"
+    },
+    {
+      "id": 4,
+      "img": "/proimg4.png",
+      "name": "Respira",
+      "description": "Outdoor bar table and stool",
+      "price": "Rp 1.500.000",
+      "new": true
+    }
+  ],
+
+  "products2": [
+    {
+      "id": 5,
+      "img": "/proimg5.png",
+      "name": "Grifo",
+      "description": "Night lamp",
+      "price": "Rp 1.500.000"
+    },
+    {
+      "id": 6,
+      "img": "/proimg6.png",
+      "name": "Muggo",
+      "price": "Rp 150.000",
+      "new": true,
+      "description": "Small Mug"
+    },
+    {
+      "id": 7,
+      "img": "/proimg7.png",
+      "name": "Pingky",
+      "disPrecent": 50,
+      "price": "Rp 7.000.000",
+      "discount": "Rp 14.000.000",
+      "description": "Cute bed set"
+    },
+    {
+      "id": 8,
+      "img": "/proimg8.png",
+      "name": "Potty",
+      "description": "Minimalist flower pot",
+      "price": "Rp 500.000",
+      "new": true
+    }
+  ],
+
+  "roomImages": [
+    { "id": 1, "title": "bedroom", "description": "Inner peace", "image": "/Rectangle 24.png" },
+    { "id": 2, "title": "bedroom", "description": "Inner peace", "image": "/Rectangle 25.png" },
+    { "id": 3, "title": "bedroom", "description": "Inner peace", "image": "/Rectangle 36.png" },
+    { "id": 4, "title": "bedroom", "description": "Inner peace", "image": "/Rectangle 37.png" }
+  ],
+
+  "BlogPosts": [
+    { "id": 1, "img": "/Rectangle 69.png", "topic": "Going all-in with millennial design", "dayInfo": "May 03 2025 G.C" },
+    { "id": 2, "img": "/Rectangle 69 (4).png", "topic": "Exploring new ways of decorating", "dayInfo": "May 03 2025 G.C" },
+    { "id": 3, "img": "/Rectangle 69 (1).png", "topic": "Handmade pieces that took time to make", "dayInfo": "May 03 2025 G.C" },
+    { "id": 4, "img": "/Rectangle 69 (2).png", "topic": "Modern home in Milan", "dayInfo": "May 03 2025 G.C" },
+    { "id": 5, "img": "/Rectangle 69 (3).png", "topic": "Colorful office redesign", "dayInfo": "May 03 2025 G.C" },
+    { "id": 6, "img": "/Rectangle 69 (4).png", "topic": "Going all-in with millennial design", "dayInfo": "May 03 2025 G.C" }
+  ],
+
+  "Posts": [
+    { "id": 1, "header": "Going all-in with millennial design", "img": "/Rectangle 68.png" },
+    { "id": 2, "header": "Exploring new ways of decorating", "img": "/Rectangle 68 (1).png" },
+    { "id": 3, "header": "Handmade pieces that took time to make", "img": "/Rectangle 68 (2).png" }
+  ]
+}
