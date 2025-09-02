@@ -1,29 +1,37 @@
- import React from 'react'
- import {HiViewGrid} from 'react-icons/hi'
-import { FaSlidersH, FaBars } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
- 
- const Shop = () => {
-   return (
-     <div className='flex flex-col md:flex-row xl:flex-row lg:flex-row sm:gap-y-5 justify-between p-4 bg-amber-100 items-center'>
-        <div className='flex justify-center lg:flex-row xl:flex-row items-center px-3 py-5'>
-            <Link className='flex py-3 gap-1 items-center px-3'>
-                <FaSlidersH className='text-2xl mx-2'/> Filter
-            </Link>
-            <Link className='flex py-3 items-center px-3'>
-                <HiViewGrid className='text-2xl mx-2'/> <FaBars className='text-2xl'/>
-            </Link>
-            <p>Showing  1-16 of 32 results</p>
-        </div>
+import React, { useState } from 'react';
+import { FaSlidersH } from 'react-icons/fa';
 
-        <div className='flex items-center px-3 justify-between gap-1 text-[15px]'>
-            Show <Link className='p-3 bg-amber-50'>16</Link>
-            <div className='flex items-center mx-2 gap-1 text-[15px]'>
-                Short by <Link className='bg-stone-50 p-3'>Default</Link>
-            </div>
-        </div>
-     </div>
-   )
- }
- 
- export default Shop
+const Shop = ({ filter, setFilter }) => {
+  const [filterOpen, setFilterOpen] = useState(false);
+
+  const handleFilterSelect = (option) => {
+    setFilter(option);
+    setFilterOpen(false);
+  };
+
+  return (
+    <div className='flex flex-col md:flex-row xl:flex-row lg:flex-row sm:gap-y-5 justify-start p-4 items-center'>
+
+      {/* Filter Button */}
+      <div className='relative'>
+        <button
+          onClick={() => setFilterOpen(!filterOpen)}
+          className='flex py-3 gap-1 items-center px-3 bg-white'
+        >
+          <FaSlidersH className='text-2xl mx-2'/> Filter
+        </button>
+
+        {filterOpen && (
+          <div className='absolute top-full mt-1 left-0 bg-white border rounded shadow-md z-50 w-36'>
+            <p className='px-3 py-2 cursor-pointer hover:bg-amber-100' onClick={() => handleFilterSelect('all')}>All</p>
+            <p className='px-3 py-2 cursor-pointer hover:bg-amber-100' onClick={() => handleFilterSelect('new')}>New</p>
+            <p className='px-3 py-2 cursor-pointer hover:bg-amber-100' onClick={() => handleFilterSelect('discounted')}>Discounted</p>
+          </div>
+        )}
+      </div>
+
+    </div>
+  );
+};
+
+export default Shop;

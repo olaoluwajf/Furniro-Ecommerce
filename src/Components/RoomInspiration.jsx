@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { RoomImages } from '../Datas';
-import Button from './Button';
+import { Link } from 'react-router-dom'
+
 
 const RoomInspiration = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,7 +26,7 @@ const RoomInspiration = () => {
           <p className="text-gray-600 mb-6">
             Our designer already made a lot of beautiful prototype of rooms that inspire you
           </p>
-          <Button name="Explore More" />
+          <Link to="/shop" className="rounded text-sm bg-amber-600 text-white font-bold border-[1px] hover:bg-amber-700 px-4 py-3 sm:px-4 md:px-6 lg:px-8 xl:px-10  sm:text-sm sm:py-4 cursor-pointer ">Explore More</Link>
         </div>
 
         {/* Right Section - Sliding Gallery */}

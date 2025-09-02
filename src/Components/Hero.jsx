@@ -11,7 +11,7 @@ const Hero = (props) => {
             </div>
             <h1 className='text-[35px] py-3 font-bold'>{props.PageName}</h1>
             <div className='flex flex-row gap-1 text-center justify-center items-center'>
-                <Link className='text-[15px] py-3 font-bold' to='/Home'>
+                <Link className='text-[15px] py-3 font-bold' to='/'>
                     Home
                 </Link>
                 <FaGreaterThan className='text-center  text-[13px]'/>

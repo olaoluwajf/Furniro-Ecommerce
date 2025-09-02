@@ -1,72 +1,99 @@
 import Hero from './Hero'
-import {Link, useParams } from 'react-router-dom'
-import {products1,products2} from '../Datas'
+import { Link } from 'react-router-dom'
 import { FiTrash } from 'react-icons/fi'
 import Features from './Features'
 import Logo from '../assets/logo.png'
+import { useCart } from './CartContext' // ✅ import our cart context
 
 const Cart = () => {
-  const { id } = useParams();
-  const allProducts = [...products1, ...products2];
-  const product = allProducts.find(p => p.id === parseInt(id));
+  const { cart, removeFromCart } = useCart();
+
+  // calculate subtotal
+  const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
   return (
-    <div className='justify-center'>
-        <Hero PageName="Cart" img={Logo}/>
-        <div className='ml-10 mr-10 mt-4 flex flex-col md:flex-row lg:flex-row xl:flex-row gap-2 justify-center mb-5'>
-          <div className='hidden md:flex-row  flex-col mr-4 lg:block xl:block'>
-            <div className='flex flex-row gap-10  text-stone-900 bg-amber-50 p-5 px-30'>
-              <span className='mr-5 ml-5 pl-5 '>Product</span>
-              <span className='px-4'>Price</span>
-              <span className='px-2 pl-4'>Quantity</span>
-              <span className='px-5'>Subtotal</span>
-            </div>
-            <div className='flex flex-row gap-5 pt-5   items-center text-stone-500'>
-              <div className='bg-amber-50 p-3 h-20  w-30 items-center justify-center'>
-                <img src='' alt="img" className='mr-5'/>
+    <div className="justify-center">
+      <Hero PageName="Cart" img={Logo} />
 
-              </div>
-              
-              <p className='mr-3'>product.name</p>
-              <p>product.price</p>
-              <p className='border px-2 ml-8'>1</p>
-              <p className='ml-10'>product.subtotal</p>
-              <div>
-                <FiTrash className='text-2xl cursor-pointer hover:text-stone-600 text-amber-300 font-bold'/>
-              </div>
+      <div className="ml-10 mr-10 mt-4 flex flex-col md:flex-row lg:flex-row xl:flex-row gap-2 justify-center mb-5">
 
-            </div>
-
+        {/* LEFT: Cart items table */}
+        <div className="flex-1 mr-4">
+          {/* Table header */}
+          <div className="hidden md:flex flex-row gap-10 text-stone-900 bg-amber-50 p-5">
+            <span className="flex-1">Product</span>
+            <span className="w-24 text-center">Price</span>
+            <span className="w-24 text-center">Quantity</span>
+            <span className="w-24 text-center">Subtotal</span>
+            <span className="w-12"></span>
           </div>
 
-          <div className='flex flex-col rounded bg-amber-50 px-10 md:justify-center sm:justify-center w-full md:w-full text-center lg:w-120 xl:w-140 '>
-            <h1 className='text-center text-2xl py-1 mb-3 font-bold '>Cart Total</h1>
-            <div className='flex flex-row gap-6 ml-3 mt-4 mb-3 justify-center'>
-              <p className='flex'>Subtotal</p>
-              <p className='ml-5 flex text-stone-400'>{product }
-                price
-              </p>
-            </div>
-            <div className='flex flex-row gap-6 ml-3 justify-center'>
-              <p>
-                Total
-              </p>
-              <p className='ml-10 text-amber-600'>
-                { }
-                total
-              </p>
-              
-            </div>
-            <div className='flex-col gap-3 p-10 mt-5'>
-                <Link to='/Checkout' className='rounded-xl p-2 px-7 border'>
-                  Check Out
-                </Link>
-            </div>
+          {/* Cart items */}
+          {cart.length === 0 ? (
+            <p className="p-5 text-gray-500">Your cart is empty.</p>
+          ) : (
+            cart.map(item => (
+              <div
+                key={item.id}
+                className="flex flex-row gap-5 py-5 border-b items-center text-stone-600"
+              >
+                {/* product image */}
+                <div className="bg-amber-50 p-3 h-20 w-20 flex items-center justify-center">
+                  <img src={item.img} alt={item.name} className="h-full object-contain" />
+                </div>
 
-          </div>
-          
+                {/* product name */}
+                <p className="flex-1">{item.name}</p>
+
+                {/* price */}
+                <p className="w-24 text-center"> {item.price.toLocaleString()}</p>
+
+                {/* quantity */}
+                <p className="w-24 text-center">{item.quantity}</p>
+
+                {/* subtotal */}
+                <p className="w-24 text-center">
+                  {(item.price * item.quantity).toLocaleString()}
+                </p>
+
+                {/* remove button */}
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="w-12 text-center text-amber-500 hover:text-amber-700"
+                >
+                  <FiTrash className="text-xl" />
+                </button>
+              </div>
+            ))
+          )}
         </div>
 
-        <Features/>
+        {/* RIGHT: Cart summary */}
+        <div className="flex flex-col rounded bg-amber-50 px-10 py-6 w-full md:w-80 text-center">
+          <h1 className="text-2xl mb-5 font-bold">Cart Total</h1>
+
+          <div className="flex flex-row justify-between mb-3">
+            <p>Subtotal</p>
+            <p className="text-stone-600">Rs. {subtotal.toLocaleString()}</p>
+          </div>
+
+          <div className="flex flex-row justify-between font-semibold text-lg">
+            <p>Total</p>
+            <p className="text-amber-600">Rs. {subtotal.toLocaleString()}</p>
+          </div>
+
+          <div className="mt-6">
+            <Link
+              to="/checkout"
+              className="block rounded-xl p-2 px-7 border bg-amber-500 text-white hover:bg-amber-600 transition"
+            >
+              Proceed to Checkout
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <Features />
     </div>
   )
 }
