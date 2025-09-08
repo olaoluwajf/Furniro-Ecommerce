@@ -48,17 +48,18 @@ const Products = ({ filter, cart, setCart }) => {
               </div>
 
               {item.new && (
-                <span className="absolute top-3 right-3 bg-green-400 text-white p-2 rounded-full font-bold pointer-events-none">
+                <span className="absolute top-3 right-3 bg-[#2EC1AC] flex justify-center items-center w-11 h-11 text-white p-2 rounded-full font-bold pointer-events-none">
                   new
                 </span>
               )}
               {item.disPrecent && (
-                <span className="absolute top-3 right-3 bg-red-700 text-white p-2 rounded-full font-bold pointer-events-none">
+                <span className="absolute top-3 right-3 bg-[#E97171] flex justify-center items-center text-white p-1.5 w-11
+               h-11 rounded-[200px] font-bold pointer-events-none">
                   -{item.disPrecent}%
                 </span>
               )}
 
-              <div className="p-4">
+              <div className="p-4 bg-[#F4F5F7]">
                 <h3 className="font-semibold">{item.name}</h3>
                 <p className="text-gray-600">{item.description}</p>
                 <div className="mt-1">

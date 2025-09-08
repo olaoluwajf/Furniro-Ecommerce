@@ -7,12 +7,10 @@ const parsePrice = (p) => Number(String(p).replace(/[^0-9]/g, "") || 0);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
-    // Load cart from localStorage if available
     const saved = localStorage.getItem("cart");
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Save cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);

@@ -10,7 +10,7 @@ const RoomInspiration = () => {
   useEffect(() => {
     const fetchRoomImages = async () => {
       try {
-        const res = await fetch("http://localhost:3000/roomImages"); // <-- your endpoint
+        const res = await fetch("http://localhost:5000/roomImages"); // <-- your endpoint
         const data = await res.json();
         setRoomImages(data);
       } catch (error) {
@@ -28,14 +28,13 @@ const RoomInspiration = () => {
     return <p className="text-center py-12">Loading...</p>;
   }
 
-  // Calculate previous and next indexes for the sliding effect
   const prevIndex = (currentIndex - 1 + roomImages.length) % roomImages.length;
   const nextIndex = (currentIndex + 1) % roomImages.length;
 
   return (
     <div className="bg-amber-50 px-1 py-12">
       <div className="max-w-6xl mx-auto flex justify-between flex-col md:flex-row items-center gap-4">
-        {/* Left Section - Text Content */}
+
         <div className="text-left">
           <h1 className="font-bold text-3xl md:text-4xl mb-4">
             50+ Beautiful Rooms Inspiration
@@ -54,7 +53,6 @@ const RoomInspiration = () => {
         {/* Right Section - Sliding Gallery */}
         <div className="md:w-1/2 relative h-96 overflow-hidden">
           <div className="relative h-full flex items-center">
-            {/* Previous Image */}
             <div className="absolute left-0 w-full transform -translate-x-full transition-transform duration-300">
               <img
                 src={roomImages[prevIndex].image}

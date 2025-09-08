@@ -1,4 +1,5 @@
-import { FiShare, FiHeart } from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
+import { HiShare } from "react-icons/hi";
 import { FaExchangeAlt } from "react-icons/fa";
 import { useCart } from "../CartContext";
 
@@ -17,7 +18,7 @@ const AddToCart = ({ product }) => {
           e.preventDefault();
           toggleCartItem(product);
         }}
-        className="bg-white text-black font-medium py-4 px-10 
+        className="bg-white text-[#B88E2F] font-medium py-4 px-12 
                    hover:bg-gray-100 transition-colors duration-200 shadow-lg"
       >
         {inCart ? "Remove from Cart" : "Add to Cart"}
@@ -25,7 +26,7 @@ const AddToCart = ({ product }) => {
 
       <div className="flex gap-6 text-white">
         <button className="flex items-center gap-1 hover:text-gray-200 transition-colors">
-          <FiShare size={16} />
+          <HiShare size={16} />
           <span>Share</span>
         </button>
         <button className="flex items-center gap-1 hover:text-gray-200 transition-colors">

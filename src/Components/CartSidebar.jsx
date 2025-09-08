@@ -16,7 +16,7 @@ const CartSidebar = ({ isOpen, onClose }) => {
 
       {/* panel */}
       <div
-        className={`fixed top-0 right-0 h-screen w-80 bg-white shadow-xl z-50 transform transition-transform duration-300
+        className={`fixed top-0 right-0 h-screen w-100 bg-white shadow-xl z-50 transform transition-transform duration-300
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex justify-between items-center p-4 border-b">
@@ -64,14 +64,14 @@ const CartSidebar = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        <div className="p-5 my-[-30px] border-t">
-          <div className="flex justify-between mb-2">
-            <span className="font-semibold">Subtotal</span>
-            <span className="font-bold text-amber-500">
+        <div className=" my-[-70px]">
+          <div className="flex justify-between border-b py-[30px] mb-4">
+            <span className="font-semibold px-[20px]">Subtotal</span>
+            <span className="font-bold mx-[80px] text-amber-500">
               Rs. {subtotal.toLocaleString()}
             </span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 px-2">
             <Link
               to="/cart"
               className="flex-1 py-2 px-2 border text-center bg-white rounded-full hover:bg-gray-300 transition"

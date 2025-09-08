@@ -52,8 +52,8 @@ const Cart = () => {
                 <p className="w-24 text-center">{item.quantity}</p>
 
                 {/* subtotal */}
-                <p className="w-24 text-center">
-                  {(item.price * item.quantity).toLocaleString()}
+                <p className="w-24 text-center"> 
+                  {(item.price).toLocaleString()}
                 </p>
 
                 {/* remove button */}
